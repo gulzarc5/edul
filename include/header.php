@@ -92,7 +92,7 @@ include_once "backend/database_connection/connection.php";
 			          </li>
 
 			          <li class="dropdown">
-			            <a class="dropdown-toggle" data-toggle="dropdown" href="gallery.php">
+			            <a class="dropdown-toggle"  href="gallery.php">
 			             GALLERY
 			            </a>
 			            <ul class="dropdown-menu" role="menu">

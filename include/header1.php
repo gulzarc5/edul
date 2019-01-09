@@ -98,7 +98,7 @@ include_once "backend/database_connection/connection.php";
 			          </li>
 
 			          <li class="dropdown">
-			            <a class="dropdown-toggle" data-toggle="dropdown" href="gallery.php">
+			            <a class="dropdown-toggle"  href="gallery.php">
 			             GALLERY
 			            </a>
 			            <ul class="dropdown-menu" role="menu">
@@ -163,7 +163,7 @@ include_once "backend/database_connection/connection.php";
 						data-x="left" data-hoffset="0" 
 						data-y="center" data-voffset="-80" 
 						data-frames='[{"delay":1000,"speed":3000,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' 
-						style="z-index: 6; font-size:50px; color:#fff; text-transform:uppercase; font-family: 'Montserrat', sans-serif;, serif; white-space: nowrap;font-weight:700;">a batter world
+						style="z-index: 6; font-size:50px; color:#fff; text-transform:uppercase; font-family: 'Montserrat', sans-serif;, serif; white-space: nowrap;font-weight:700;">a better world
 					</div>
 					
 										

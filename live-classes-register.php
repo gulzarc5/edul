@@ -186,7 +186,7 @@ include('include/header.php');
           </tbody>
        </table>
         <div class="form-group register-btn">
-            <submit class="btn btn-primary btn-lg">I Aggree,Pay Now</submit>
+             <a href="receipt.php" class="btn btn-primary">I Aggree,Pay Now</a>
           </div>
      </form>
        </div>
