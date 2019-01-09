@@ -13,7 +13,34 @@ include('include/header.php');
 
 <section>
   <div class="container gal-container" style="padding-top: 70px;">
-    <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+    <?php
+      $sql = "SELECT * FROM `gallery` WHERE `type`='1' ORDER BY `id` DESC";
+      if ($res = $connection->query($sql)){
+        $count = 1;
+         while($image = $res->fetch_assoc()){
+          print '<div class="col-md-3 col-sm-3 co-xs-3 gal-item">
+                  <div class="box">
+                    <a href="#" data-toggle="modal" data-target="#imgModel'.$count.'">
+                      <img src="backend/uploads/gallery_image/'.$image['source'].'">
+                    </a>
+                    <div class="modal fade" id="imgModel'.$count.'" tabindex="-1" role="dialog">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                          <div class="modal-body">
+                            <img src="backend/uploads/gallery_image/'.$image['source'].'">
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>';
+          $count++;
+         }
+      }
+    ?>
+   <!--  <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
       <div class="box">
         <a href="#" data-toggle="modal" data-target="#1">
           <img src="http://nabeel.co.in/files/bootsnipp/gallery/1.jpg">
@@ -30,8 +57,8 @@ include('include/header.php');
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+    </div> -->
+    <!-- <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
       <div class="box">
         <a href="#" data-toggle="modal" data-target="#2">
           <img src="images/photo/p7.png">
@@ -309,7 +336,7 @@ include('include/header.php');
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
