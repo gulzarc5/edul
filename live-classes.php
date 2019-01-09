@@ -1,5 +1,15 @@
 <?php
 include('include/header.php');
+include "backend/database_connection/connection.php";
+function showState($connection){
+  $sql = "SELECT * FROM `state`";
+  if ($res = $connection->query($sql)) {
+      while($state = $res->fetch_assoc()){
+        print '<option value="'.$state['id'].'">'.$state['name'].'</option>';
+      }
+      
+  }
+}
 ?>
 
 <div class="container-fluid bg-no-overlay">
@@ -42,53 +52,10 @@ include('include/header.php');
                     <label class="col-lg-2 col-md-2 col-xs-12 col-sm-12 control-label">State:
                     </label>
                     <div class="col-lg-10 col-md-10 col-xs-12 col-sm-12">
-                      <select name="StateSearch" onchange="getcity(this.value)" id="StateSearch" class="form-control">
-                        <option selected="selected" value="0">--Show All--
+                      <select name="StateSearch"  id="state_srch" class="form-control">
+                        <option selected value="">--Show All--
                         </option>
-                        <option value="Assam">Assam
-                        </option>
-                        <option value="BIHAR">BIHAR
-                        </option>
-                        <option value="CHATTISGARH">CHATTISGARH
-                        </option>
-                        <option value="DELHI">DELHI
-                        </option>
-                        <option value="GUJARAT">GUJARAT
-                        </option>
-                        <option value="Haryana">Haryana
-                        </option>
-                        <option value="Himachal Pradesh">Himachal Pradesh
-                        </option>
-                        <option value="Jammu &amp; Kashmir">Jammu &amp; Kashmir
-                        </option>
-                        <option value="JHARKHAND">JHARKHAND
-                        </option>
-                        <option value="KARNATAKA">KARNATAKA
-                        </option>
-                        <option value="Kerala">Kerala
-                        </option>
-                        <option value="MADHYA PRADESH">MADHYA PRADESH
-                        </option>
-                        <option value="MAHARASHTRA">MAHARASHTRA
-                        </option>
-                        <option value="Odisha">Odisha
-                        </option>
-                        <option value="PUNJAB">PUNJAB
-                        </option>
-                        <option value="RAJASTHAN">RAJASTHAN
-                        </option>
-                        <option value="Tamil Nadu">Tamil Nadu
-                        </option>
-                        <option value="Tamilnadu">Tamilnadu
-                        </option>
-                        <option value="Telangana">Telangana
-                        </option>
-                        <option value="UTTAR PRADESH">UTTAR PRADESH
-                        </option>
-                        <option value="UTTARAKHAND">UTTARAKHAND
-                        </option>
-                        <option value="West Bengal">West Bengal
-                        </option>
+                        <?php showState($connection); ?>
                       </select>
                     </div>
                   </div>
@@ -98,55 +65,10 @@ include('include/header.php');
                     <label class="col-lg-2 col-md-2 col-xs-12 col-sm-12 control-label">City:
                     </label>
                     <div class="col-lg-10 col-md-10 col-xs-12 col-sm-12">
-                      <select name="ctl00$ContentPlaceHolder1$ddlCitySearch" onchange="search_center(document.getElementById('ContentPlaceHolder1_ddlCitySearch').value,document.getElementById('StateSearch').value);" id="ContentPlaceHolder1_ddlCitySearch" class="form-control">
-                        <option selected="selected" value="0">--Show All--
+                      <select name="ctl00$ContentPlaceHolder1$ddlCitySearch"  id="city_list" class="form-control">
+                        <option selected="selected" value="">--Show All--
                         </option>
-                        <option value="Ahmednagar">Ahmednagar
-                        </option>
-                        <option value="AKOLA">AKOLA
-                        </option>
-                        <option value="AKOLA NEW">AKOLA NEW
-                        </option>
-                        <option value="AMRAVATI">AMRAVATI
-                        </option>
-                        <option value="AURANGABAD">AURANGABAD
-                        </option>
-                        <option value="Gondia">Gondia
-                        </option>
-                        <option value="Ichalkaranji">Ichalkaranji
-                        </option>
-                        <option value="JALGAON">JALGAON
-                        </option>
-                        <option value="Jalna">Jalna
-                        </option>
-                        <option value="Kolhapur">Kolhapur
-                        </option>
-                        <option value="Latur">Latur
-                        </option>
-                        <option value="Mira Road">Mira Road
-                        </option>
-                        <option value="Mumbai - Andheri West ">Mumbai - Andheri West 
-                        </option>
-                        <option value="MUMBAI(Andheri WEST)1)">MUMBAI(Andheri WEST)1)
-                        </option>
-                        <option value="Mumbai(GHATKOPAR)">Mumbai(GHATKOPAR)
-                        </option>
-                        <option value="Mumbai-Dadar">Mumbai-Dadar
-                        </option>
-                        <option value="NAGPUR">NAGPUR
-                        </option>
-                        <option value="Nanded ">Nanded 
-                        </option>
-                        <option value="Nashik ">Nashik 
-                        </option>
-                        <option value="PUNE">PUNE
-                        </option>
-                        <option value="solapur">solapur
-                        </option>
-                        <option value="THANE">THANE
-                        </option>
-                        <option value="Thane(New)">Thane(New)
-                        </option>
+                       
                       </select>
                     </div>
                   </div>
@@ -365,39 +287,59 @@ include('include/header.php');
 <?php
 include('include/footer.php');
 ?>
-
+ 
 	<script type="text/javascript">
     $(document).ready(function() {
         /*document.getElementById("mnuaboutus").classList.add('mnubrder');*/
         document.getElementById("mnucenters").className = "mnubrder";
     });   
     </script>
-   <script>
+<script src="backend/admin/vendors/jquery/dist/jquery.min.js"></script>
+<script>var $j = jQuery.noConflict(true);</script>
+<script>
+    // AJAX call for autocomplet
+$j(document).ready(function(){
+    $j("#state_srch").change(function(){
+        alert($j(this).val());
+        $.ajax({
+        type: "POST",
+        url: "backend/admin/ajaxphp/city_fetch.php",
+        data:'state='+$(this).val(),
+        success: function(data){
+            // console.log(data);
+            // $("#suggesstion-box").show();
+            $j("#city_list").html(data);
+            // $("#trnto").css("background","#FFF");
+        }
+        });
+    });
+});
 
-if("MAHARASHTRA"=='')
-{document.getElementById('').value='0';
-}
-else{
-document.getElementById('StateSearch').value="MAHARASHTRA";
-}
-
-
-if("PUNE"=='')
-{document.getElementById('ContentPlaceHolder1_ddlCitySearch').value='0';
-}
-else{
-document.getElementById('ContentPlaceHolder1_ddlCitySearch').value="PUNE";
-}
-
-
-function search_center(city,state)
-{
-  window.location.href="virtual-classes-center-list?city="+city+"&state="+state;
- 
-}
-function getcity(state)
-{
- window.location.href="virtual-classes-center-list?state="+state;
-}
 </script>
+<script>
+// if("MAHARASHTRA"=='')
+// {document.getElementById('').value='0';
+// }
+// else{
+// document.getElementById('StateSearch').value="MAHARASHTRA";
+// }
 
+
+// if("PUNE"=='')
+// {document.getElementById('ContentPlaceHolder1_ddlCitySearch').value='0';
+// }
+// else{
+// document.getElementById('ContentPlaceHolder1_ddlCitySearch').value="PUNE";
+// }
+
+
+// function search_center(city,state)
+// {
+//   window.location.href="virtual-classes-center-list?city="+city+"&state="+state;
+ 
+// }
+// function getcity(state)
+// {
+//  window.location.href="virtual-classes-center-list?state="+state;
+// }
+</script>
