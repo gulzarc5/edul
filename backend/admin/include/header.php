@@ -79,6 +79,13 @@ include_once "../database_connection/connection.php";
                       <li><a href="index3.html">Dashboard3</a></li>
                     </ul>
                   </li>
+                  <li><a><i class="fa fa-home"></i> Course <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="add_new_course.php">Add New Course</a></li>
+                      <li><a href="add_new_batch.php">Add New Batch</a></li>
+                      <li><a href="batch_list.php">Batch List</a></li>
+                    </ul>
+                  </li>
                   <li><a><i class="fa fa-home"></i> Centers <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="center_list.php">Center List</a></li>
