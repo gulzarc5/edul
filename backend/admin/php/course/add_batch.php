@@ -9,6 +9,7 @@ session_start();
 		$batch_end_date = $connection->real_escape_string(mysql_entities_fix_string($_POST['batch_end_date']));
 		$start_time = $connection->real_escape_string(mysql_entities_fix_string($_POST['start_time']));
 		$end_time = $connection->real_escape_string(mysql_entities_fix_string($_POST['end_time']));
+		$fees = $connection->real_escape_string(mysql_entities_fix_string($_POST['fees']));
 
 		$course_name = null;
 
@@ -20,7 +21,7 @@ session_start();
 		// echo $course_name;
 
 
-	 	$sql = "INSERT INTO `batch`(`id`, `name`, `course_id`, `start_date`, `end_date`, `start_time`, `end_time`, `center_id`, `created_at`) VALUES (null,'$course_name','$course_id','$batch_start_date','$batch_end_date','$start_time','$end_time','$center_id',date('now'))";
+	 	$sql = "INSERT INTO `batch`(`id`, `name`, `course_id`, `start_date`, `end_date`, `start_time`, `end_time`, `center_id`, `fees`, `created_at`) VALUES (null,'$course_name','$course_id','$batch_start_date','$batch_end_date','$start_time','$end_time','$center_id','$fees',date('now'))";
 	 	if ($res = $connection->query($sql)) {
 	 		header("location:../../add_new_batch.php?msg=1");
 	 	}else{

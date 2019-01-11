@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "backend/database_connection/connection.php";
 ?>
 <!doctype html>
@@ -46,9 +47,15 @@ include_once "backend/database_connection/connection.php";
 				</div>
 				<div class="col-sm-6 col-xs-12 header-top-right">
 					<ul class="list-unstyled">
-						<li><a href="my-account.php"><i class="fa fa-user top-icon"></i>My Account</a></li>
-						<li><a href="register.php"><i class="fa fa-user-plus top-icon"></i> Sing up</a></li>
-						<li><a href="login.php"><i class="fa fa-lock top-icon"></i>Login</a></li>
+						<?php 
+							if (!empty($_SESSION['user_id']) && !empty($_SESSION['email'])) {
+								print '<li><a href="my-account.php"><i class="fa fa-user top-icon"></i>My Account</a></li>
+								<li><a href="web_site_php/user_logout.php"><i class="fa fa-user-plus top-icon"></i>Logout</a></li>';
+							}else{
+								print '<li><a href="register.php"><i class="fa fa-user-plus top-icon"></i> Sing up</a></li>
+									<li><a href="login.php"><i class="fa fa-lock top-icon"></i>Login</a></li>';
+							}
+						?>
 					</ul>
 				</div>
 			</div>

@@ -26,7 +26,7 @@ include('include/header.php');
   <div class="row">
     <div class="col-md-4">
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12" id="print_div">
       <div class="">
         <div class="row">
          
@@ -39,7 +39,6 @@ include('include/header.php');
             <h3 class="title-content">Thank You for Registering for the Course</h3>
           </div>
        </div>
-            <form method="POST" name="frmcenterlist" class="form-horizontal">
               <div class="row text-center">  
               </div>
               <div class="row">
@@ -64,21 +63,26 @@ include('include/header.php');
                       <tr>
                         <td align="center">1
                         </td>
-                        <td>PUNE
-                        </td>
-                        <td>
-                          <a href="center-details.php?&amp;id=136">
-                            OFFICE NO.15B 2 nd floor SHUKRAWAR PETH OPP.CHINCHEHI ALIM NEAR BY BSNL TEL.EXCHANGE BAJIRAO ROAD PUNE-411002                                
-                          </a>
-                        </td>
-                        <td>9011851796
-                        </td>
+                        <?php 
+                        if (isset($_GET['batch'])) {
+                          $sql_center ="SELECT `center`.`name` as center_name, `center`.`address` as center_address, `center`.`pin` as center_pin, `center`.`phone_no` as center_phone FROM `batch` INNER JOIN `center` ON `center`.`id` = `batch`.`center_id` WHERE `batch`.`id`='$_GET[batch]'";
+                          if ($res_center = $connection->query($sql_center) ) {
+                             $row_center = $res_center->fetch_assoc();
+                             print '<td>'.$row_center['center_name'].'</td>
+                             <td>
+                              <a href="center-details.php?&amp;id=136">'
+                               .$row_center['center_address'].'-'.$row_center['center_pin'].                               
+                              '</a>
+                            </td>
+                            <td>'.$row_center['center_phone'].'</td>';
+                          }
+                        }
+                        ?>
                       </tr>
                     </tbody>
                   </table>
                 </div>    
               </div>
-            </form>
             <!-- ################ Approved Batches List ################# -->
             <div class="row">
               <h3 class="pdd">  &nbsp;  &nbsp;  Batches
@@ -107,26 +111,27 @@ include('include/header.php');
                     <tr>
                       <td align="center">1
                       </td>
-                      <td style="width:130px;">FM And ECO#November(07 : 00-09 : 05-Daily)
-                      </td>
-                      <td style="width:250px;">2018-11-16
-                      </td>
-                      <td style="width:200px;">2019-01-15
-                      </td>
-                      <td style="width:200px;">07 : 00-09 : 05
-                      </td>
-                      <td style="width:200px;">11800
-                      </td>
+                      <?php
+                       if (isset($_GET['batch'])) {
+                        $sql = "SELECT * FROM `batch` WHERE `id`='$_GET[batch]'";
+                        if ($res = $connection->query($sql)) {
+                          $row_batch = $res->fetch_assoc();
+                          print '<td style="width:130px;">'.$row_batch['name'].'</td>
+                          <td style="width:250px;">'.$row_batch['start_date'].'</td>
+                          <td style="width:200px;">'.$row_batch['end_date'].'</td>
+                          <td style="width:200px;">'.$row_batch['start_time'].'-'.$row_batch['end_time'].'</td>
+                           <td style="width:200px;">'.$row_batch['fees'].'</td>';
+                        }
+                      }
+                      ?>
+                      
+                      
+                     
                       <td align="center">
                         <!--<a href="center-details.php?&id=136" target="_blank"><img src="images/page_white_magnify.png">                                 </a>-->
-                        <form method="POST" action="select-batch">
-                          <input type="hidden" name="course" value="CA INTERMEDIATE">
-                          <input type="hidden" name="state" value="MAHARASHTRA">
-                          <input type="hidden" name="city" value="PUNE">
-                          <input type="hidden" name="center" value="136">
-                          <input type="hidden" name="batch" id="txtbatchid" value="7731">
-                          <a href="#" class="btn btn-primary"><i class="fa fa-print" aria-hidden="true">  Print</i></a>
-                        </form>
+                       
+                          <button class="btn btn-primary" onclick="printDiv() "><i class="fa fa-print" aria-hidden="true">  Print</i></button>
+                       
                       </td>
                     </tr>
                      </tbody>
@@ -157,30 +162,36 @@ include('include/footer.php');
     </script>
    <script>
 
-if("MAHARASHTRA"=='')
-{document.getElementById('').value='0';
-}
-else{
-document.getElementById('StateSearch').value="MAHARASHTRA";
-}
+<script>var $j = jQuery.noConflict(true);</script>
+<script>
+    // AJAX call for autocomplet
+$j(document).ready(function(){
+  var state = null;
+    $j("#state_srch").change(function(){
+         state =$j(this).val();
+        window.location.href = "live-classes.php?stat="+state+"";
+  });
 
 
-if("PUNE"=='')
-{document.getElementById('ContentPlaceHolder1_ddlCitySearch').value='0';
-}
-else{
-document.getElementById('ContentPlaceHolder1_ddlCitySearch').value="PUNE";
-}
 
 
-function search_center(city,state)
-{
-  window.location.href="virtual-classes-center-list?city="+city+"&state="+state;
- 
-}
-function getcity(state)
-{
- window.location.href="virtual-classes-center-list?state="+state;
-}
+});
+
+  function printDiv() 
+  {
+
+    var divToPrint=document.getElementById('print_div');
+
+    var newWin=window.open('','Print-Window');
+
+    newWin.document.open();
+
+    newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+
+    newWin.document.close();
+
+    setTimeout(function(){newWin.close();},10);
+
+  }
 </script>
 

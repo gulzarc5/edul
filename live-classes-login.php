@@ -15,19 +15,20 @@ include('include/header.php');
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3">
-				<form action="#" class="eduread-register-form text-center">
-					<p class="lead">Welcome Back</p>					
+				<form action="web_site_php/user_login_check.php" method="post" class="eduread-register-form text-center">
+					<p class="lead">Login Form</p>	
+						<input  class="form-control" name="page" value="1" type="hidden">				
 					<div class="form-group"> 
-					  	<input autocomplete="off" class="required form-control" placeholder="Username *" name="name" type="text">
+					  	<input autocomplete="off" class="required form-control" placeholder="Enter Email *" name="email" type="text" required>
 					</div>
 					<div class="form-group">
-					  	<input class="required form-control" placeholder="Password *" name="password" type="password">
+					  	<input class="required form-control" placeholder="Enter Password *" name="password" type="password" required>
 					</div>		
 					<div class="form-group register-btn">
-					 	<submit class="btn btn-primary btn-lg">Login</submit>
+					 	<input class="btn btn-primary btn-lg" type="submit" name="Register" value="Log In" >
 					</div>
 					<a href="forgot-password.html"><strong>Forgot password?</strong></a>		
-					<p>Not a member? <a href="register.html"><strong>Join today</strong></a></p>	
+					<p>Not a member? <a href="register.html"><strong>Join today</strong></a></p>		
 				</form>
 			</div>												
 		</div>
