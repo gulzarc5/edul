@@ -21,24 +21,6 @@ function showMessage($msg){
     }
   }
 
-
-function getCourse($connection){
-  $sql = "SELECT * FROM `course` ORDER BY `id` DESC";
-  if ($res = $connection->query($sql)) {
-    $sl_count = 1;
-    while($course = $res->fetch_assoc()){
-      print '<tr>
-                <td>'.$sl_count.'</td>
-                <td>'.$course['name'].'</td>
-                <td><a href="edit_course_form.php?c_id='.$course['id'].'" class="btn btn-success">Edit</a>
-                    <a href="php/course/course_delete.php?c_id='.$course['id'].'" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>';
-      $sl_count++;
-    }
-
-  }
-}
 ?>
 <div class="clearfix"></div>
 <div class="right_col" role="main">
@@ -46,7 +28,7 @@ function getCourse($connection){
     <div class="col-md-12 col-sm-12 col-xs-12">
       <div class="x_panel">
         <div class="x_title">
-          <h2>Add New Course<small></small></h2>
+          <h2>Edit Course<small></small></h2>
           <div class="clearfix"></div>
             <?php 
               if (isset($_GET['msg'])) {
@@ -57,52 +39,38 @@ function getCourse($connection){
 
         <div class="x_content">
           <br />
-          <form action="php/course/add_course.php" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left">
+          <?php
+          if (isset($_GET['c_id'])) {
+            $sql = "SELECT * FROM `course` WHERE `id`='$_GET[c_id]'";
+            if ($res = $connection->query($sql)) {
+              $course_row = $res->fetch_assoc();          
+          ?>
+          <form action="php/course/update_course.php" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left">
+            <input type="hidden" name="c_id" value="<?php echo $course_row['id']; ?>">
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="teacher_name">Course Name <span class="required">*</span>
               </label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" name="course_name" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                <input type="text" name="course_name" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $course_row['name']; ?>">
               </div>
             </div>
             
             <div class="ln_solid"></div>
             <div class="form-group">
               <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                <button type="submit" class="btn btn-success" name="add_course" value="add_course">Submit</button>
+                <button type="submit" class="btn btn-success" name="edit_course" value="edit_course">Save</button>
               </div>
             </div>
           </form>
+          <?php
+           }
+          }
+          ?>
         </div>
       </div>
     </div>
     
     <div class="clearfix"></div>
-      <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel">
-          <div class="x_title">
-            <h2>Teacher<small>List</small></h2>
-            <div class="clearfix"></div>
-          </div>
-          <div class="x_content">
-
-            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
-              <thead>
-                <tr>
-                  <th>Sl</th>
-                  <th>Name</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php
-                  getCourse($connection);
-                ?>                        
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
   </div>
 </div>
 

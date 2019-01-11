@@ -39,10 +39,11 @@
 					<div class="form-group">
 					 	<input autocomplete="off" name="l_name" class="form-control" placeholder="Last Name" type="text">
 					</div>	
-					<div class="form-group">
-					 	<input class="required form-control" name="email" placeholder="Email *" type="email">
+					<div class="form-group" id="emailmsg">
+					 	<input class="required form-control" name="email" placeholder="Email *" type="email" id="email_check">
+					 	
 					</div>					
-					
+
 					<div class="form-group">
 					  <input class="required form-control" name="password" placeholder="Password *"  type="password">
 					</div>		
@@ -68,3 +69,31 @@
 <?php
 include('include/footer.php');
 ?>
+
+<script src="backend/admin/vendors/jquery/dist/jquery.min.js"></script>
+<script>var $j = jQuery.noConflict(true);</script>
+
+<script>
+$j(document).ready(function(){
+
+    $j("#email_check").blur(function(){
+         email =$j(this).val();
+         alert(email);
+        // window.location.href = "live-classes.php?stat="+state+"";
+        $.ajax({
+        type: "POST",
+        url: "ajax/email_check.php",
+        data:{ email : email,},
+        success: function(data){
+            console.log(data);
+            if (data == 1) {
+            	 $j("#emailmsg").append('<p id="emailmsg" class="alert alert-danger">Email Already Exist</p>');
+            	 $j("#email_check").val('');
+            }
+             
+		}
+        });
+  });
+});
+
+</script>

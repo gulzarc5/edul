@@ -27,17 +27,22 @@
 					</ul>
 				</ul>
 			</div>
-
+<?php
+if (!empty($_SESSION['user_id']) && !empty($_SESSION['email'])){
+	?>
 			<div class="col-md-6">
 					<h3>My Account</h3>
 					<ul >
 					<ul class="list-unstyled">
-						<li><a href="my-profile.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>My Profile</a></li>
+						<li><a href="my-account.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>My Profile</a></li>
 						<li><a href="order-history.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Order History</a></li>
 						<li><a href="registered-course.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Registered Course</a></li>
 					</ul>
 				</ul>
 			</div>
+<?php
+}
+?>
 		</div>
 	</div>
 

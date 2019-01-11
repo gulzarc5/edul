@@ -20,13 +20,13 @@ function  getBatchDetails($connection,$batch_id,$center_id){
    $sql ="SELECT * FROM `batch` WHERE `id`='$batch_id'";
     if ($res = $connection->query($sql)) {
       $batch = $res->fetch_assoc();
-        print '<tr>
+        print '
                 <td style="width:270px;">'.$batch['name'].'</td>
                 <td style="width:130px;">'.$batch['start_date'].'</td>
                 <td style="width:200px;">'.$batch['end_date'].'</td>
                 <td style="width:200px;">'.$batch['start_time'].'-'.$batch['end_time'].'</td>
                 <td style="width:200px;">'.$batch['fees'].'</td>
-              </tr>';
+              ';
     }
 }
 
@@ -89,12 +89,13 @@ function  getBatchDetails($connection,$batch_id,$center_id){
                       </th>
                       
                     </tr>
+                    <tr id="batch_detail_tr">
                     <?php 
                       if (isset($_POST['batch_id']) && isset($_POST['center_id'])) {
                          getBatchDetails($connection,$_POST['batch_id'],$_POST['center_id']);
                       }
                      ?>
-
+                    </tr>
                     
                   </tbody>
                 </table>
@@ -136,5 +137,30 @@ include('include/footer.php');
         document.getElementById("mnucenters").className = "mnubrder";
     });   
     </script>
+
+<script src="backend/admin/vendors/jquery/dist/jquery.min.js"></script>
+<script>var $j = jQuery.noConflict(true);</script>
+
+<script>
+$j(document).ready(function(){
+
+    $j("#select_batch").change(function(){
+         select_batch =$j(this).val();
+        // window.location.href = "live-classes.php?stat="+state+"";
+        $.ajax({
+        type: "POST",
+        url: "ajax/batch_detail.php",
+        data:'select_batch='+$(this).val(),
+        success: function(data){
+            // console.log(data);
+
+              $j("#batch_detail_tr").html(data);
+
+        }
+        });
+  });
+});
+
+</script>
 
 
