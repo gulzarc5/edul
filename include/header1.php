@@ -13,7 +13,7 @@ include_once "backend/database_connection/connection.php";
 	<meta name="description" content="Eduread - Education HTML5 Template">
 	<meta name="keywords" content="college, education, institute, responsive, school, teacher, template, university">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>EDULOUNGE || Home</title> 
+	<title>EDULOUNGE </title> 
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/assets/bootstrap.min.css">
@@ -59,7 +59,7 @@ include_once "backend/database_connection/connection.php";
 								print '<li><a href="my-account.php"><i class="fa fa-user top-icon"></i>My Account</a></li>
 								<li><a href="web_site_php/user_logout.php"><i class="fa fa-user-plus top-icon"></i>Logout</a></li>';
 							}else{
-								print '<li><a href="register.php"><i class="fa fa-user-plus top-icon"></i> Sing up</a></li>
+								print '<li><a href="register.php"><i class="fa fa-user-plus top-icon"></i> Sign up</a></li>
 									<li><a href="login.php"><i class="fa fa-lock top-icon"></i>Login</a></li>';
 							}
 						?>
@@ -71,7 +71,7 @@ include_once "backend/database_connection/connection.php";
 	</div><!-- Ends: .header-top -->
 
 	<div class="header-body">
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-inverse edu-navbar">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -164,7 +164,7 @@ include_once "backend/database_connection/connection.php";
 						data-x="left" data-hoffset="0" 
 						data-y="center" data-voffset="-140" 
 						data-frames='[{"delay":0,"speed":3000,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' 
-						style="z-index: 6; font-size:50px; color:#fff; text-transform:uppercase; font-family: 'Montserrat', sans-serif;, serif; white-space: nowrap;font-weight:700;">better education for
+						style="z-index: 6; font-size:50px; color:#fff; text-transform:uppercase; font-family: 'Montserrat', sans-serif;, serif; white-space: nowrap;font-weight:700; margin-top: 180px;">better education for
 					</div>
 					
 					<!-- LAYER NR. 2 -->
@@ -172,7 +172,7 @@ include_once "backend/database_connection/connection.php";
 						data-x="left" data-hoffset="0" 
 						data-y="center" data-voffset="-80" 
 						data-frames='[{"delay":1000,"speed":3000,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' 
-						style="z-index: 6; font-size:50px; color:#fff; text-transform:uppercase; font-family: 'Montserrat', sans-serif;, serif; white-space: nowrap;font-weight:700;">a better world
+						style="z-index: 6; font-size:50px; color:#fff; text-transform:uppercase; font-family: 'Montserrat', sans-serif;, serif; white-space: nowrap;font-weight:700; margin-top: 170px;"" >a better world
 					</div>
 					
 										
@@ -195,7 +195,7 @@ include_once "backend/database_connection/connection.php";
 						data-x="left" data-hoffset="0" 
 						data-y="center" data-voffset="-140" 
 						data-frames='[{"delay":0,"speed":3000,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' 
-						style="z-index: 6; font-size:50px; color:#fff; text-transform:uppercase; font-family: 'Montserrat', sans-serif;, serif; white-space: nowrap;font-weight:700;">Education A 
+						style="z-index: 6; font-size:50px; color:#fff; text-transform:uppercase; font-family: 'Montserrat', sans-serif;, serif; white-space: nowrap;font-weight:700;margin-top: 180px;">Education is a 
 					</div>
 					
 					<!-- LAYER NR. 2 -->
@@ -203,7 +203,7 @@ include_once "backend/database_connection/connection.php";
 						data-x="left" data-hoffset="0" 
 						data-y="center" data-voffset="-80" 
 						data-frames='[{"delay":1000,"speed":3000,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' 
-						style="z-index: 6; font-size:50px; color:#fff; text-transform:uppercase; font-family: 'Montserrat', sans-serif;, serif; white-space: nowrap;font-weight:700;">Global Community
+						style="z-index: 6; font-size:50px; color:#fff; text-transform:uppercase; font-family: 'Montserrat', sans-serif;, serif; white-space: nowrap;font-weight:700;margin-top: 170px;">Global Community
 					</div>
 					
 					

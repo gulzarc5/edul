@@ -252,10 +252,12 @@
 	header .header-body .edu-navbar {
 	    padding: 20px 0;
 	    margin-bottom: 0;
-	    background: white;
+	    background: transparent;
 	    border-radius: 0px;
 	    z-index: 10;
 	}
+
+	
 	header .header-body .edu-navbar .navbar-header a img {
 	    float: left;
 	}
@@ -295,7 +297,7 @@
 	    text-decoration: none;
 	}
 	header .header-body .edu-navbar .edu-nav .nav li a:before {
-	    background: #fec722;
+	    background: transparent;
 	    height: 2px;
 	    width: 100%;
 	    bottom: 0px;
@@ -813,7 +815,7 @@
 	
 	.video-main-area {
 	    background: transparent url("../images/index/video-bg.jpg") no-repeat center center/cover;
-	    padding: 255px 0;
+	    /*padding: 255px 0;*/
 	}
 	.video-main-area .video-play-btn {
 	    margin-bottom: 40px;
@@ -993,7 +995,7 @@
 	
 	.publication-area {
 	    background: #ffffff;
-	    padding: 100px 0;
+	    padding: 35px 0;
 	}
 	.publication-area .publication-single-item {
 	    box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
@@ -1150,7 +1152,7 @@
 	
 	.students-say-area {
 	    background: #ffffff;
-	    padding: 100px 0;
+	    padding: 37px 0;
 	    min-height: 500px;
 	}
 	.students-say-area .section-header h2 {
@@ -2134,7 +2136,8 @@
 	   /* background: url("../images/index-03/banner-bg.jpg") no-repeat center center;
 	    min-height: 810px;*/
 	    background-size: cover;
-	    position: relative;
+	    position: absolute;
+	    z-index: 999;
 	}
 	.home_version_03 header .header-body:before {
 	    /*background: rgba(0, 0, 0, 0.5);*/
@@ -2220,7 +2223,7 @@
 	}
 	.home_version_03 .Welcome-area {
 	    background: #ffffff;
-	    padding: 100px 0;
+	    padding: 20px 0;
 	    /*=======[  Wellcome > Event Area ]========*/
 	}
 	.home_version_03 .Welcome-area h2 {
@@ -2437,7 +2440,7 @@
 	}
 	.home_version_03 .Courses-area {
 	    background: #f9f9f9;
-	    padding: 100px 0 60px;
+	    padding: 20px 0 60px;
 	}
 	.home_version_03 .Courses-area .section-header-box {
 	    /*margin-bottom: 0;*/
@@ -2932,7 +2935,7 @@
 	.home_version_03 footer {
 	    background: transparent url("../images/index-03/footer-bg.jpg") no-repeat center center/cover;
 	    min-height: 150px;
-	    padding-top: 100px;
+	    padding-top: 57px;
 	}
 	/*====================================================================================================
 										===[ Index  Version 04  ]===
@@ -8860,8 +8863,8 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 .navbar-inverse {
-    background-color: #fff;
-    border-color: #fff;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
@@ -9029,3 +9032,8 @@ i.red{
 /*footer a,footer a:hover{
     color: #88C425;
 }*/
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #0a0a0a;
+    font-size: 17px;
+}

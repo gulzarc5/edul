@@ -3,8 +3,8 @@
 	<div class="container">
 		<div class="row">
 			<div class=" col-sm-12 footer-content-box">
-				<div class="col-md-4">
-					<h3><span><i class="fa fa-graduation-cap footer-h-icon"></i></span>EDULOUNGE</h3>
+				<div class="col-md-4" >
+					<span><img src="images/flogo.png" alt="" style="width: 200px; padding-bottom: 10px; "></span>
 
 					<p>We are Edulounge, creat your passion and inspiration.The unique blend of outstanding mentoring and meticulous study. And hope success will come for your dream. </p>
 					
@@ -12,30 +12,37 @@
 
 				
 
-				<div class="col-md-4 text-center">
-					<h3>QUICK LINKS</h3>
+				<div class="col-md-5 text-center">
 					<div class="col-md-12">
-						<ul class="col-md-5">
+					<div class="col-md-6 text-center">
+					<h3>QUICK LINKS</h3>
+					<ul >
 					<ul class="list-unstyled">
 						<li><a href="index.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Home</a></li>
-						<li><a href="about-us.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>About Us</a></li>
-						<li><a href="contact.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Contact Us</a></li>
-						
-						
-					</ul>
-				</ul>
-				<ul class="col-md-7">
-					<ul class="list-unstyled">
 						<li><a href="gallery.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Gallery</a></li>
 						<li><a href="buy-books.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Buy Books</a></li>
+						<li><a href="about-us.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>About Us</a></li>
+						<li><a href="contact.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Contact Us</a></li>
 						<li><a href="pen-drive-classes.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Pen Drive Classes</a></li>
-					</ul> 
+					</ul>
 				</ul>
-				</div>
 			</div>
 
+			<div class="col-md-6">
+					<h3>My Account</h3>
+					<ul >
+					<ul class="list-unstyled">
+						<li><a href="my-profile.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>My Profile</a></li>
+						<li><a href="order-history.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Order History</a></li>
+						<li><a href="registered-course.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Registered Course</a></li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-			<div class="col-md-4 text-center">
+
+			<div class="col-md-3 ">
 					<h3>GET IN TOUCH</h3>
 					<ul class="list-unstyled">
 						 <li> 

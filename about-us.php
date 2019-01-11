@@ -135,7 +135,7 @@ include('include/header.php');
 </div>
 
 
-<section class="become-teachers-01 " style="margin-top: 10px;">
+<section class="become-teachers-01 " style="margin-top: -74px;">
 	<div class="container">
 				
 		

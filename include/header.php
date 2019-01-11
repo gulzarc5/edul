@@ -52,7 +52,7 @@ include_once "backend/database_connection/connection.php";
 								print '<li><a href="my-account.php"><i class="fa fa-user top-icon"></i>My Account</a></li>
 								<li><a href="web_site_php/user_logout.php"><i class="fa fa-user-plus top-icon"></i>Logout</a></li>';
 							}else{
-								print '<li><a href="register.php"><i class="fa fa-user-plus top-icon"></i> Sing up</a></li>
+								print '<li><a href="register.php"><i class="fa fa-user-plus top-icon"></i> Sign up</a></li>
 									<li><a href="login.php"><i class="fa fa-lock top-icon"></i>Login</a></li>';
 							}
 						?>
@@ -63,7 +63,7 @@ include_once "backend/database_connection/connection.php";
 	</div><!-- Ends: .header-top -->
 
 	<div class="header-body">
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse edu-navbar" style="background-color: white;">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">

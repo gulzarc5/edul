@@ -67,156 +67,21 @@ include('include/header1.php');
 <!-- ./ End Welcome Area section -->
 
 
-<!--Start Courses Area Section-->
-<section class="Courses-area">
-	<div class="container">	
-		<div class="row">
-			<div class="col-sm-12 section-header-box">
-				<div class="section-header">
-					<h2>Popular Products</h2>
-				</div><!-- ends: .section-header -->
-			</div>
-		</div>
-
-		<div class="row courses-r-margin-bottom">
-			<div class="col-sm-4 single-courses-box">
-			    <div class="single-courses">
-					<figure>
-						<div class="figure-img"><img src="images/index/courses-01.jpg" alt="" class="img-responsive"></div>
-						<figcaption>
-							<div><a href="#" class="read_more-btn">view more</a></div>
-						</figcaption>
-					</figure>
-					<div class="courses-content-box">
-						<div class="courses-content">
-							<h3><a href="#">WordPress</a></h3>
-							
-						</div>
-						<div class="courses-content-bottom">
-							<ul class="list-unstyled">
-								<li><span><i class="fa fa-money" aria-hidden="true"></i> 90</span></li>
-								<li><i class="fa fa-user"></i> 80</li>
-								<li><i class="fa fa-comment"></i> 35</li>
-							</ul>
-						</div>
-					</div>
-				</div><!-- Ends: .single courses -->
-			</div><!-- Ends: . -->
 
 
-
-			<div class="col-sm-4 single-courses-box">
-			    <div class="single-courses">
-					<figure>
-						<div class="figure-img"><img src="images/index/courses-02.jpg" alt="" class="img-responsive"></div>
-						<figcaption>
-							<div><a href="#" class="read_more-btn">view more</a></div>
-						</figcaption>
-					</figure>
-					<div class="courses-content-box">
-						<div class="courses-content">
-							<h3><a href="#">WordPress</a></h3>
-						</div>
-						<div class="courses-content-bottom">
-							<ul class="list-unstyled">
-								<li><span><i class="fa fa-money" aria-hidden="true"></i> 90</span></li>
-								<li><i class="fa fa-user"></i> 80</li>
-								<li><i class="fa fa-comment"></i> 35</li>
-							</ul>
-						</div>
-					</div>
-				</div><!-- Ends: .single courses -->
-			</div><!-- Ends: . -->
-<div class="col-sm-4 single-courses-box">
-			    <div class="single-courses">
-					<figure>
-						<div class="figure-img"><img src="images/index/courses-02.jpg" alt="" class="img-responsive"></div>
-						<figcaption>
-							<div><a href="#" class="read_more-btn">view more</a></div>
-						</figcaption>
-					</figure>
-					<div class="courses-content-box">
-						<div class="courses-content">
-							<h3><a href="#">WordPress</a></h3>
-						</div>
-						<div class="courses-content-bottom">
-							<ul class="list-unstyled">
-								<li><span><i class="fa fa-money" aria-hidden="true"></i> 90</span></li>
-								<li><i class="fa fa-user"></i> 80</li>
-								<li><i class="fa fa-comment"></i> 35</li>
-							</ul>
-						</div>
-					</div>
-				</div><!-- Ends: .single courses -->
-			</div><!-- Ends: . -->
-		</div><!--End .row-->
-	</div>
-</section><!-- Ends: . -->	
-<!-- ./ End Courses Area section -->
-
-
-<section class="search-curses-area" style="margin-top: 90px;">
+<section class="video-main-area video">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 section-header-box">
-				<div class="section-header">
-					<h2>Find The Best Courses</h2>
-				</div><!-- ends: .section-header -->
+			<div class="col-sm-6 video-play-btn" style="margin-top: 70px;">
+				<iframe width="460" height="245" src="https://www.youtube.com/embed/0TsQU6HX-30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
-		</div>
 
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="row">
-					<div class="search-courses-form">
-				        <form class="cearch-form">
-				          	<div class="col-sm-3 form-group">
-				            	<input type="text" placeholder="Course Title" required>
-				          	</div>
-				          	<div class="col-sm-3 form-group" >
-				            	<select class="form-control" required>
-					              	<option value="">All Categories</option>
-					              	<option value="1">Basic Computing</option>
-					              	<option value="2">Web Development</option>
-					              	<option value="3">Graphic Design</option>
-					              	<option value="4">Internet Marketing</option>
-					              	<option value="5">Computer Programming</option>
-				            	</select>
-				          	</div>
-
-				          	<div class="col-sm-3 form-group">
-				            	<select class="form-control" required>
-				              		<option value="">Time Duration</option>
-				              		<option value="1">09.00am - 10.00am</option>
-				              		<option value="2">10.30am - 11.30am</option>
-				              		<option value="3">02.00pm - 03.00pm</option>
-				              		<option value="4">03.30pm - 04.30pm</option>
-				            	</select>
-				          	</div>
-
-				          	<div class="col-sm-3 form-group">
-				            	<select class="form-control" required>
-				             	 	<option value="">All Speakers</option>
-				              		<option value="1">David Martin</option>
-				              		<option value="2">Michael Smith</option>
-				              		<option value="3">Katie Hale</option>
-				              		<option value="4">Willian Kane</option>
-				            	</select>
-				          	</div>
-							
-							<div class="col-sm-12" >
-					          	<div class="scrach-btn-box">
-					            	<button type="submit" class="btn btn-default scrach-btn" >scrach courses</button>
-					          	</div>
-				          	</div>
-				        </form>
-			        </div>
-				</div>
+			<div class="col-sm-6 video-play-btn" style="margin-top: 70px;">
+				<iframe width="460" height="245" src="https://www.youtube.com/embed/FBqkXb9J2Yo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>
 </section>
-<!-- ./ End Information Area section -->
 
 
 
