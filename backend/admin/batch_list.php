@@ -1,6 +1,21 @@
 <?php
 require_once "include/header.php";
 
+function showMessage($msg){
+    if ($msg == 3) {
+      print "<p class='alert alert-success'>Batch Updated Successfully</p>";
+    }
+    if ($msg == 4) {
+      print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
+    }
+    if ($msg == 5) {
+      print "<p class='alert alert-danger'>Batch Deleted Successfully</p>";
+    }
+    if ($msg == 6) {
+      print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
+    }
+  }
+
 function getCenters($connection){
   $sql = "SELECT * FROM `batch` WHERE `end_date` >= '2019-01-09' ORDER BY `id` DESC";
   if ($res = $connection->query($sql)) {
@@ -19,8 +34,8 @@ function getCenters($connection){
                 <td>'.$batch['end_date'].'</td>
                 <td>'.$batch['start_time'].'</td>
                 <td>'.$batch['end_time'].'</td>
-                <td><a href="" class="btn btn-success">Edit</a>
-                    <a href="" class="btn btn-danger">Delete</a>
+                <td><a href="edit_batch.php?b_id='.$batch['id'].'" class="btn btn-success">Edit</a>
+                    <a href="php/course/batch_delete.php?b_id='.$batch['id'].'" class="btn btn-danger">Delete</a>
                 </td>
               </tr>';
       $sl_count++;
@@ -38,6 +53,11 @@ function getCenters($connection){
                   <div class="x_title">
                     <h2>All Batches<small></small></h2>
                     <div class="clearfix"></div>
+                      <?php 
+                        if (isset($_GET['msg'])) {
+                          showMessage($_GET['msg']);
+                        }           
+                      ?>
                   </div>
                   <div class="x_content">
           

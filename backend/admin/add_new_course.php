@@ -7,6 +7,18 @@ function showMessage($msg){
     if ($msg == 2) {
       print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
     }
+    if ($msg == 3) {
+      print "<p class='alert alert-success'>Course Name Updated Successfully</p>";
+    }
+    if ($msg == 4) {
+      print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
+    }
+    if ($msg == 5) {
+      print "<p class='alert alert-danger'>Course Deleted Successfully</p>";
+    }
+    if ($msg == 6) {
+      print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
+    }
   }
 
 
@@ -18,8 +30,8 @@ function getCourse($connection){
       print '<tr>
                 <td>'.$sl_count.'</td>
                 <td>'.$course['name'].'</td>
-                <td><a href="" class="btn btn-success">Edit</a>
-                    <a href="" class="btn btn-danger">Delete</a>
+                <td><a href="edit_course_form.php?c_id='.$course['id'].'" class="btn btn-success">Edit</a>
+                    <a href="php/course/course_delete.php?c_id='.$course['id'].'" class="btn btn-danger">Delete</a>
                 </td>
               </tr>';
       $sl_count++;
