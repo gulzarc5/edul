@@ -174,14 +174,19 @@ function showcity($connection,$state,$city = null){
                   </td>
                   <td>
                     <fieldset>
-
+                      <?php
+                      if (empty($_SESSION['user_id'])) {
+                      ?>
+                     
                       <div class="form-group">
                         <label class="col-md-4 control-label">Password:*</label>
                         <div class="col-md-8">
                           <input  name="password" placeholder="Enter Password" class="form-control" required="true" value="" type="password">
                         </div>
                       </div>
-
+                      <?php
+                       }
+                       ?>
                       <div class="form-group">
                         <label class="col-md-4 control-label">Email:*</label>
                         <div class="col-md-8">
