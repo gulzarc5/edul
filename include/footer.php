@@ -1,4 +1,5 @@
-<!-- Footer Area section -->
+
+	<!-- Footer Area section -->
 <footer>
 	<div class="container">
 		<div class="row">
@@ -69,6 +70,19 @@ if (!empty($_SESSION['user_id']) && !empty($_SESSION['email'])){
 		</div>
 	</div>
 
+	<section>
+		<div class="icon-float">
+			<ul>
+				<li><a href="#" class="fb1"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+				<li><a href="#" class="tw1"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+				<li><a href="#" class="wa1"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> </li>
+				<li><a href="#" class="ig1"><i class="fa fa-instagram" aria-hidden="true"></i></a> </li>
+				<li><a href="#" class="gp1"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+				<li><a href="#" class="tw1"><i class="fa fa-skype" aria-hidden="true"></i></a> </li>
+			</ul>
+		</div>
+	</section>
+
 
 	<div class="footer-bottom">
 		<div class="container">
@@ -95,11 +109,12 @@ if (!empty($_SESSION['user_id']) && !empty($_SESSION['email'])){
     <!-- ============================
     JavaScript Files
     ============================= -->
+
     <script src="js/assets/jquery.meanmenu.min.js"></script>
 	<!-- Custom JS -->
 	<script src="js/custom.js"></script>
 
-	<script src="js/vendor/jquery-1.12.4.min.js"></script>
+	<script src="js/vendor/jquery-1.12.4.min.js"></script> 
 	<!-- Bootstrap JS -->
 	<script src="js/assets/bootstrap.min.js"></script>
 	 <!-- owl carousel -->
@@ -131,9 +146,103 @@ if (!empty($_SESSION['user_id']) && !empty($_SESSION['email'])){
 	<script type="text/javascript" src="js/assets/revolution/revolution.js"></script>
 	<!-- Custom JS -->
 	<script src="js/custom.js"></script>
+	<script src="js/jquery.bpopup.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>  -->
+	<!-- <script>
+		$( document ).ready(function() {
+    	$('#popup_this').bPopup();
+		});
+   </script> -->
+    <script>
+   		$(window).load(function(){
+        setTimeout(function() {
+                $('#enquirypopup').modal('show');
+        }, 3000);
+            });
+     </script>
+
+      <script>
+        	$(document).ready(function() {
+  			//Set the carousel options
+  			$('#quote-carousel').carousel({
+    		pause: true,
+    		interval: 4000,
+  			});
+		});
+      </script>
 
 
 </body>
-
-<!-- Mirrored from ecologytheme.com/theme/eduread/teachers-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 May 2018 20:27:15 GMT -->
 </html>
+<style type="text/css">
+/* SOCIAL MEDIA SHARE 
+/*-------------------------------------------------*/
+ .icon-float {
+     position: fixed;
+     left: 0px;
+     top: 35%;
+     z-index: 999;
+}
+ .icon-float ul {
+     padding: 0px;
+}
+ .icon-float ul li {
+     list-style-type: none;
+}
+ .icon-float ul li a {
+     display: block;
+     -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+     transition: all 0.5s ease;
+     padding: 0px;
+}
+ .icon-float ul li a i {
+     padding: 8px;
+     width: 40px;
+     height: 32px;
+     text-align: center;
+     color: #fff;
+}
+ .icon-float ul li a:hover {
+     transform: rotateY(-180deg);
+}
+ .icon-float ul li a:hover i {
+     transform: rotateY(180deg);
+}
+ .fb1 {
+     background: #3b5998;
+}
+ .gp1 {
+     background: #dd4b39;
+}
+ .tw1 {
+     background: #1da1f2;
+}
+ .li1 {
+     background: #0077b5;
+}
+ .yt1 {
+     background: #cd201f #ec6e68;
+}
+
+.ig1 {
+     background: #ec6e68;
+}
+ .wa1 {
+     background: #34af23;
+}
+ .sh {
+     background: #fff;
+     padding: 10px 0px;
+     font-size: 11px;
+     text-align: center;
+     color: #333;
+     border-top-right-radius: 5px;
+}
+ .sh1 {
+     background: #333;
+     border-bottom-right-radius: 5px;
+}
+/*-------------------------------------------------*/
+</style>

@@ -37,6 +37,59 @@ include_once "backend/database_connection/connection.php";
 	<link rel="stylesheet" href="css/responsive.css">
 </head>
 <body class="home_version_03">
+	<div id="enquirypopup" class="modal fade in" role="dialog">
+        <div class="modal-dialog">
+        	<!-- Modal content-->
+            <div class="modal-content row">
+                <div class="modal-header custom-modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body section-white">
+                	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                		<!-- Indicators -->
+				      <ol class="carousel-indicators">
+				        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				      </ol>
+
+				      <!-- Wrapper for slides -->
+				      <div class="carousel-inner">
+				        <div class="item active">
+				          <img src="images/photo/p1.png" alt="...">
+				          <div class="carousel-caption">
+				           <!--  <h2>Heading</h2> -->
+				          </div>
+				        </div>
+				        <div class="item">
+				          <img src="images/photo/p2.png" alt="...">
+				          <div class="carousel-caption">
+				            <!-- <h2>Heading</h2> -->
+				          </div>
+				        </div>
+				        <div class="item">
+				          <img src="images/photo/p3.png" alt="...">
+				          <div class="carousel-caption">
+				            <!-- <h2>Heading</h2> -->
+				          </div>
+				        </div>
+				      </div>
+
+				      <!-- Controls -->
+				      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+				        <span class="glyphicon glyphicon-chevron-left"></span>
+				      </a>
+				      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+				        <span class="glyphicon glyphicon-chevron-right"></span>
+				      </a>
+				    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
 <!-- Preloader -->
 <div id="preloader">
 	<div id="status">&nbsp;</div>
@@ -51,7 +104,9 @@ include_once "backend/database_connection/connection.php";
 						<li><i class="fa fa-envelope top-icon"></i> info@edulounge.com</li>
 					</ul>
 				</div>
-				<div class="col-sm-6 col-xs-12 header-top-right">
+
+
+				<div class="col-sm-4 col-xs-12 header-top-right">
 					<ul class="list-unstyled">
 						
 						<?php 
@@ -66,6 +121,10 @@ include_once "backend/database_connection/connection.php";
 						
 					</ul>
 				</div>
+				<div class="col-sm-2 col-xs-12 header-top-right blink">
+					<a href="#" class="navbar-brand  data-scroll "><img class="blink-image" src="images/blogo.png"style="width: 100px;"></a>
+				</div>
+			</div>
 			</div>
 		</div>
 	</div><!-- Ends: .header-top -->
@@ -90,8 +149,15 @@ include_once "backend/database_connection/connection.php";
 					<li ><a data-scroll="" href="index.php">HOME</a>
 					</li>
 
-					<li ><a data-scroll="" href="about-us.php">ABOUT US</a>
-					</li>
+					<li class="dropdown">
+			            <a class="dropdown-toggle"  href="about-us.php">
+			             ABOUT US
+			            </a>
+			            <ul class="dropdown-menu" role="menu">
+			             <li><a href="faculty-team.php">Faculty Team</a></li>
+                         <li><a href="our-testimonials.php">Our Testimonials</a></li>
+			            </ul>
+			          </li>
 
 					<li><a data-scroll="" href="live-classes.php">LIVE CLASSES</a>
 					</li>

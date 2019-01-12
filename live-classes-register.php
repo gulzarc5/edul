@@ -75,27 +75,37 @@ function showcity($connection,$state,$city = null){
                 </table>
               </div>    
           </div>
-          
+         
           <form class="form-horizontal" action="web_site_php/course_registration.php" method="post">
             <table class="table table-striped" style="margin-top: 20px;">
               <tbody>
                 <tr>
                   <td>
-                    <fieldset>
-
+                   
+                      <table  style="margin-bottom: 139px;" >
+                        <tr>
+                          <td>
                       <div class="form-group">
                         <label class="col-md-4 control-label">Full Name:*</label>
                         <div class="col-md-8">
                           <input name="student_name" placeholder="Enter Full Name" class="form-control" required="true"  type="text">
                         </div>
                       </div>
-                         
+                      </td>
+                    </tr>
+                        
+                      <tr>
+                      <td>   
                       <div class="form-group">
                         <label class="col-md-4 control-label">Mobile:*</label>
                         <div class="col-md-8">
                           <input  name="mobile" placeholder="Enter Mobile Number" class="form-control" required="true" value="" type="text">
                         </div>
                       </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="70%">
                       <div class="form-group">
                         <label class="col-md-4 control-label">Selected City:*</label>
                         <div class="col-md-8">
@@ -120,7 +130,11 @@ function showcity($connection,$state,$city = null){
                           }
                         }
                       ?>
+                    </td>
+                  </tr>
                       
+                      <tr>
+                        <td>
                       <div class="form-group">
                         <label class="col-md-4 control-label">Fee:*</label>
                         <div class="col-md-8">
@@ -131,14 +145,21 @@ function showcity($connection,$state,$city = null){
                           ?>" type="text" disabled>
                         </div>
                       </div>
-
+                    </td>
+                  </tr>
+                    <tr>
+                      <td>
                       <div class="form-group">
                         <label class="col-md-4 control-label">Address Line 1:*</label>
                         <div class="col-md-8">
                           <textarea class="form-control" placeholder="Enter Address 1" rows="5" name="address1"></textarea>
                         </div>
                       </div>
-                         
+                    </td>
+                  </tr>
+                    
+                    <tr>
+                    <td> 
                       <div class="form-group">
                         <label class="col-md-4 control-label">State:*</label>
                         <div class="col-md-8">
@@ -148,14 +169,22 @@ function showcity($connection,$state,$city = null){
                           </select>
                         </div>
                       </div>
+                    </td>
+                  </tr>
 
+                  <tr>
+                    <td>
                       <div class="form-group">
                         <label class="col-md-4 control-label">Pincode:*</label>
                         <div class="col-md-8">
                           <input  name="pin" placeholder="Enter Pin Code" class="form-control" required="true" value="" type="text">
                         </div>
                       </div>
-                         
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>  
                       <div class="form-group">
                         <label class="col-md-4 control-label">I Accept terms & Condition:*</label>
                         <div class="col-md-8">
@@ -170,30 +199,44 @@ function showcity($connection,$state,$city = null){
                             }
                           }
                           ?>
-                    </fieldset>
+                        </td>
+                      </tr>
+                          </table>
+                   
                   </td>
                   <td>
-                    <fieldset>
+                    <table style="margin-bottom: 152px;">
+
                       <?php
                       if (empty($_SESSION['user_id'])) {
                       ?>
-                     
+                     <tr>
+                      <td>
                       <div class="form-group">
                         <label class="col-md-4 control-label">Password:*</label>
                         <div class="col-md-8">
                           <input  name="password" placeholder="Enter Password" class="form-control" required="true" value="" type="password">
                         </div>
                       </div>
+                      </td>
+                   </tr>
                       <?php
                        }
                        ?>
+                     
+                   <tr>
+                    <td>
                       <div class="form-group">
                         <label class="col-md-4 control-label">Email:*</label>
                         <div class="col-md-8">
                           <input  name="email" placeholder="Enter Email" class="form-control" required="true" value="" type="text">
                         </div>
                       </div>
+                    </td>
+                  </tr>
 
+                    <tr>
+                      <td>
                       <div class="form-group">
                         <label class="col-md-4 control-label">Selected Course:*</label>
                         <div class="col-md-8">
@@ -208,7 +251,11 @@ function showcity($connection,$state,$city = null){
                           ?>                              
                         </div>
                       </div>
+                    </td>
+                  </tr>
 
+                    <tr>
+                      <td>
                       <div class="form-group">
                         <label class="col-md-4 control-label">Selected Center:*</label>
                         <div class="col-md-8">
@@ -223,21 +270,60 @@ function showcity($connection,$state,$city = null){
                           ?>
                         </div>
                       </div>
+                    </td>
+                  </tr>
 
+
+                  <tr>
+                      <td>
+                      <div class="form-group">
+                        <label class="col-md-4 control-label">Registration Type:*</label>
+                       <div class="col-md-8">
+                          <select class="form-control" id="" name="registration">
+                            <option> 1</option>
+                            <option>2</option>
+                            <option >3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                      <td>
+                      <div class="form-group">
+                        <label class="col-md-4 control-label">CA:*</label>
+                        <div class="col-md-8">
+                          <input  name="CA" placeholder="CA" class="form-control" required="true" value="" type="text">
+                        </div>
+                      </div>
+                    </td>
+                  </tr> 
+
+                   <!-- <tr>
+                      <td>
                       <div class="form-group">
                         <label class="col-md-4 control-label">ICAI Registration No:*</label>
                         <div class="col-md-8">
                           <input  name="icai_no" placeholder="Enter ICAI Registration No" class="form-control" required="true" value="" type="text">
                         </div>
                       </div>
-                         
+                    </td>
+                  </tr> -->
+                       
+                    <tr>
+                      <td>  
                       <div class="form-group">
                         <label class="col-md-4 control-label">Address Line2:*</label>
                         <div class="col-md-8">
                           <textarea class="form-control" rows="5" name="address2"></textarea>
                         </div>
                       </div>
+                    </td>
+                  </tr>
                          
+                    <tr>
+                      <td>
                       <div class="form-group">
                         <label class="col-md-4 control-label">City*</label>
                         <div class="col-md-8">
@@ -246,7 +332,12 @@ function showcity($connection,$state,$city = null){
                           </select>
                           </div>
                       </div>
+                    </td>
+                  </tr>
 
+
+                     <tr>
+                      <td width="40%">
                       <div class="form-group">
                         <label class="col-md-4 control-label">Total Pay:*</label>
                         <div class="col-md-8">
@@ -257,7 +348,9 @@ function showcity($connection,$state,$city = null){
                           ?>" type="text" disabled>
                         </div>
                       </div>
-                    </fieldset>
+                    </td>
+                  </tr>
+                    </table>
                   </td>
                 </tr>
               </tbody>

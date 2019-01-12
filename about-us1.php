@@ -477,7 +477,176 @@ include('include/header.php');
 </section>
 
 
+<!-- ./ End Students Say Area section -->
+<section class="students-say-area" style="background-color: #8080800f;">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 section-header-box">
+				<div class="section-header">
+					<h2>OUR Testimonials</h2>
+				</div><!-- ends: .section-header -->
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="img-full-box">
+				<div class="col-sm-3 col-sm-offset-4">								
+					<div class="carousel-images slider-nav">
+						<div>
+							<img src="images/testimonial/1.png" alt="1" class="img-responsive img-circle">
+						</div>
+						<div>
+							<img src="images/testimonial/2.png" alt="2" class="img-responsive img-circle">
+						</div>
+						<div>
+							<img src="images/testimonial/5.png" alt="3" class="img-responsive img-circle">
+						</div>
+						<div>
+							<img src="images/testimonial/4.png" alt="4" class="img-responsive img-circle">
+						</div>
+						<div>
+							<img src="images/testimonial/3.png" alt="5" class="img-responsive img-circle">
+						</div>
+						<div>
+							<img src="images/testimonial/6.png" alt="6" class="img-responsive img-circle">
+						</div>
+						<div>
+							<img src="images/testimonial/7.png" alt="7" class="img-responsive img-circle">
+						</div>
+						<div>
+							<img src="images/testimonial/8.png" alt="8" class="img-responsive img-circle">
+						</div>
+						<div>
+							<img src="images/testimonial/9.png" alt="9" class="img-responsive img-circle">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-8 col-sm-offset-2">
+				<div class="carousel-text slider-for">
+					<div class="single-box">
+						<p>Sir, I had clear my group 2 exams in November and i am a chartered Now. I didnot communication my results back then please my sincere apology. I would like to thank you for not just teaching me ISCA infact the best thing i have learnt from you is how to carry yourself. Thank you sir for helping me secure 59 in ISCA. I will always have a fond memory of you going forward in life</p>
+						<ul class="list-unstyled rank-icons">
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>									
+						</ul>
+						<h3></h3>
+						<span>Sorabh Jain</span>
+					</div>
+
+					<div class="single-box">
+						<p>Dear Sir, I want to thank you for helping me clear my CA inter group2. I got 62 marks in ITSM. I was not able to clear the group only because of this paper and in my NOV17 attempt. I got 32 in ITSM.
+						You helped me a lot in clearing the group. Thank you once again Sir.</p>
+						<ul class="list-unstyled rank-icons">
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>									
+						</ul>
+						<h3></h3>
+						<span>Neina Devi</span>
+					</div>
+
+					<div class="single-box">
+						<p>Sir it was efforts in ISCA that made me score 72....Thank you so much sir...Your are the best faculty in ISCA.</p>
+						<ul class="list-unstyled rank-icons">
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>									
+						</ul>
+						<h3></h3>
+						<span>Neha Dhariwal</span>
+					</div>
+
+					<div class="single-box">
+						<p>Thank you so much Sir for your constant support and guidance....Loved the way you taught and encouraged in the class.... I was always weak in theary but the way you made us understand the concepts and also how the read theory subjects was just super amazing....Now my fear of theory subjects has gone down considerably....Thank you so much sir</p>
+						<ul class="list-unstyled rank-icons">
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>									
+						</ul>
+						<h3></h3>
+						<span>Deep</span>
+					</div>
+
+					<div class="single-box">
+						<p>Thank You Sir...I got 74 marks...This is only because of your motivation...Thank You so much.</p>
+						<ul class="list-unstyled rank-icons">
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>									
+						</ul>
+						<h3></h3>
+						<span>Sapna</span>
+					</div>
+
+					<div class="single-box">
+						<p>Thank you so much bhaiya for your great teaching...it took long to clear but I never failed in ISCA... following your notes and teaching...secored 56 in ISCA...</p>
+						<ul class="list-unstyled rank-icons">
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>									
+						</ul>
+						<h3></h3>
+						<span></span>
+					</div>
+					<div class="single-box">
+						<p>Thank you so much sir...I cleared second group with 62 in ISCA</p>
+						<ul class="list-unstyled rank-icons">
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>									
+						</ul>
+						<h3></h3>
+						<span>Nishant</span>
+					</div>
+
+					<div class="single-box">
+						<p>1 mark short in ISCA for exemtion..Thank you sir for the support in ISCA</p>
+						<ul class="list-unstyled rank-icons">
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>									
+						</ul>
+						<h3></h3>
+						<span></span>
+					</div>
+
+					<div class="single-box">
+						<p>I passed my group 2 with 62 in ISCA. All thank you to you, Today I am a chartered accountant, Thank you for all your support.</p>
+						<ul class="list-unstyled rank-icons">
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>									
+						</ul>
+						<h3></h3>
+						<span>Hemant Sharma</span>
+					</div>
+				</div>
+			</div><!-- /.block-text -->
+		</div>	<!--./End row-->
+	</div>
+</section>
+<!-- ./ End Students Say Area section -->
 
 <?php
 include('include/footer.php');

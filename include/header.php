@@ -32,6 +32,7 @@ include_once "backend/database_connection/connection.php";
 	<link rel="stylesheet" href="css/responsive.css">
 </head>
 <body class="t-profile-01 teachers-01 become_teachers home_version_03 contact courses">
+	
 <!-- Preloader -->
 <div id="preloader">
 	<div id="status">&nbsp;</div>
@@ -47,7 +48,7 @@ include_once "backend/database_connection/connection.php";
 						<li><i class="fa fa-envelope top-icon"></i> info@edulounge.com</li>
 					</ul>
 				</div>
-				<div class="col-sm-6 col-xs-12 header-top-right">
+				<div class="col-sm-4 col-xs-12 header-top-right">
 					<ul class="list-unstyled">
 						<?php 
 							if (!empty($_SESSION['user_id']) && !empty($_SESSION['email'])) {
@@ -59,6 +60,9 @@ include_once "backend/database_connection/connection.php";
 							}
 						?>
 					</ul>
+				</div>
+				<div class="col-sm-2 col-xs-12 header-top-right blink">
+					<a href="#" class="navbar-brand  data-scroll "><img class="blink-image" src="images/blogo.png"style="width: 100px;"></a>
 				</div>
 			</div>
 		</div>
@@ -83,9 +87,15 @@ include_once "backend/database_connection/connection.php";
           			<ul class="nav navbar-nav navbar-right  marg-head">
 					<li ><a data-scroll="" href="index.php">HOME</a>
 					</li>
-
-					<li ><a data-scroll="" href="about-us.php">ABOUT US</a>
-					</li>
+					<li class="dropdown">
+			            <a class="dropdown-toggle"  href="about-us.php">
+			             ABOUT US
+			            </a>
+			            <ul class="dropdown-menu" role="menu">
+			             <li><a href="faculty-team.php">Faculty Team</a></li>
+                         <li><a href="our-testimonials.php">Our Testimonials</a></li>
+			            </ul>
+			          </li>
 
 					<li><a data-scroll="" href="live-classes.php">LIVE CLASSES</a>
 					</li>
