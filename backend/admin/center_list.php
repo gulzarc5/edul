@@ -1,6 +1,22 @@
 <?php
 require_once "include/header.php";
 
+function showMessage($msg){
+    if ($msg == 1) {
+      print "<p class='alert alert-success'>Center Updated Successfully</p>";
+    }
+    if ($msg == 2) {
+      print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
+    }
+    if ($msg == 3) {
+      print "<p class='alert alert-success'>Center Deleted Successfully</p>";
+    }
+    if ($msg == 4) {
+      print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
+    }
+   
+  }
+
 function getCenters($connection){
   $sql = "SELECT * FROM `center` ORDER BY `id` DESC";
   if ($res = $connection->query($sql)) {
@@ -15,8 +31,8 @@ function getCenters($connection){
                 <td>'.$center['pin'].'</td>
                 <td>'.$center['email'].'</td>
                 <td>'.$center['phone_no'].'</td>
-                <td><a href="" class="btn btn-success">Edit</a>
-                    <a href="" class="btn btn-danger">Delete</a>
+                <td><a href="edit_center.php?cnt_id='.$center['id'].'" class="btn btn-success">Edit</a>
+                    <a href="php/center/center_delete.php?cnt_id='.$center['id'].'" class="btn btn-danger">Delete</a>
                 </td>
               </tr>';
       $sl_count++;
@@ -35,6 +51,11 @@ function getCenters($connection){
                     <h2>All Centers<small></small></h2>
                     <div class="clearfix"></div>
                   </div>
+                  <?php
+                    if (isset($_GET['msg'])) {
+                       showMessage($_GET['msg']);
+                    }
+                  ?>
                   <div class="x_content">
           
                     <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">

@@ -35,7 +35,7 @@ function showMessage($msg){
 
                     ?>
                     <form action="php/teacher/update_teacher.php" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left">
-                      <input type="hidden" name="tec_id">
+                      <input type="hidden" name="tec_id" value="<?php echo $_GET['t_id']; ?>">
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="teacher_name">Teacher Name <span class="required">*</span>
                         </label>

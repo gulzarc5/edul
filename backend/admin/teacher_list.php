@@ -7,6 +7,18 @@ function showMessage($msg){
     if ($msg == 2) {
       print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
     }
+    if ($msg == 3) {
+      print "<p class='alert alert-success'>Teacher Updated Successfully</p>";
+    }
+    if ($msg == 4) {
+      print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
+    }
+    if ($msg == 5) {
+      print "<p class='alert alert-success'>Teacher Deleted Successfully</p>";
+    }
+    if ($msg == 6) {
+      print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
+    }
   }
 
 function getTeachers($connection){
@@ -25,7 +37,7 @@ function getTeachers($connection){
                 <td>'.$teacher['about'].'</td>
                 <td>'.$teacher['dob'].'</td>
                 <td><a href="edit_teacher.php?t_id='.$teacher['id'].'" class="btn btn-success">Edit</a>
-                    <a href="" class="btn btn-danger">Delete</a>
+                    <a href="php/teacher/delete_teacher.php?t_id='.$teacher['id'].'&img='.$teacher['image'].'" class="btn btn-danger">Delete</a>
                 </td>
               </tr>';
       $sl_count++;
@@ -43,6 +55,11 @@ function getTeachers($connection){
                   <div class="x_title">
                     <h2>Teacher<small>List</small></h2>
                     <div class="clearfix"></div>
+                    <?php 
+                        if (isset($_GET['msg'])) {
+                          showMessage($_GET['msg']);
+                        }           
+                      ?>
                   </div>
                   <div class="x_content">
           

@@ -2,7 +2,7 @@
 session_start();
 	include "../../admin_login/admin_session_check.php";
 	include "../../../database_connection/connection.php";
-	if ($_POST['add_teaher']) {
+	if ($_POST['edit_teacher']) {
 		$techer_id = $connection->real_escape_string(mysql_entities_fix_string($_POST['tec_id']));
 		$teacher_name = $connection->real_escape_string(mysql_entities_fix_string($_POST['teacher_name']));
 		$email = $connection->real_escape_string(mysql_entities_fix_string($_POST['email']));
@@ -23,21 +23,25 @@ session_start();
        			if ($res_image_fetch = $connection->query($sql_image_fetch)) {
 
        				$image_fetch_row = $res_image_fetch->fetch_assoc();
-       				$deletePath = "../../../uploads/teacher_image/".$image_name ;
+       				$deletePath = "../../../uploads/teacher_image/".$image_fetch_row['image'];
+       				unlink($deletePath);
        			}
        			$image_name = md5(uniqid()).date('now').".".$ext;
        			$path = "../../../uploads/teacher_image/".$image_name ;
        			move_uploaded_file($image_tmp_name,$path);	
+       			$sql_update_image = "UPDATE `teachers` SET `image`='$image_name' WHERE `id`='$techer_id'";
+       			if ($res_update_image = $connection->query($sql_update_image)) {
+       				# code...
+       			}
        		}else{
-       			header("location:../../add_teacher_form.php?msg=2");
+       			header("location:../../teacher_list.php?msg=4");
        		}
 	 	}
-
-	 	$sql = "INSERT INTO `teachers`(`id`, `name`, `email`, `mobile`, `gender`, `dob`, `qualification`, `about`, `image`, `added_date`) VALUES (null,'$teacher_name','$email','$mobile','$gender','$b_day','$qualification','$about','$image_name',date('now'))";
+	 	$sql ="UPDATE `teachers` SET `name`='$teacher_name',`email`='$email',`mobile`='$mobile',`gender`='$gender',`dob`='$b_day',`qualification`='$qualification',`about`='$about' WHERE `id`='$techer_id'";
 	 	if ($res = $connection->query($sql)) {
-	 		header("location:../../add_teacher_form.php?msg=1");
+	 		header("location:../../teacher_list.php?msg=3");
 	 	}else{
-	 		header("location:../../add_teacher_form.php?msg=2");
+	 		header("location:../../teacher_list.php?msg=4");
 	 	}
     }else{
     	echo "data not found";

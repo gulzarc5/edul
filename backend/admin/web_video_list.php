@@ -2,9 +2,15 @@
 require_once "include/header.php";
 function showMessage($msg){
     if ($msg == 1) {
-      print "<p class='alert alert-success'>Teacher Added Successfully</p>";
+      print "<p class='alert alert-success'>Video Added Successfully</p>";
     }
     if ($msg == 2) {
+      print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
+    }
+     if ($msg == 3) {
+      print "<p class='alert alert-success'>Video Deleted Successfully</p>";
+    }
+    if ($msg == 4) {
       print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
     }
   }
@@ -19,8 +25,8 @@ function getimage($connection){
                 <td><iframe width="360" height="245" src="'.$video['source'].'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </td>
                 <td>'.$video['date_added'].'</td>
-                <td><a href="" class="btn btn-success">Edit</a>
-                    <a href="" class="btn btn-danger">Delete</a>
+                <td>
+                    <a href="php/web_image_video/delete_video.php?v_id='.$video['id'].'" class="btn btn-danger">Delete</a>
                 </td>
               </tr>';
       $sl_count++;
@@ -38,6 +44,11 @@ function getimage($connection){
                   <div class="x_title">
                     <h2>Teacher<small>List</small></h2>
                     <div class="clearfix"></div>
+                    <?php 
+                        if (isset($_GET['msg'])) {
+                          showMessage($_GET['msg']);
+                        }           
+                      ?>
                   </div>
                   <div class="x_content">
           

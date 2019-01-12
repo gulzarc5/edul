@@ -72,12 +72,7 @@ include_once "../database_connection/connection.php";
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
-                    </ul>
+                  <li><a href="deshboard.php"><i class="fa fa-home"></i> Home</span></a>
                   </li>
                   <li><a><i class="fa fa-home"></i> Course <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
@@ -90,6 +85,12 @@ include_once "../database_connection/connection.php";
                     <ul class="nav child_menu">
                       <li><a href="center_list.php">Center List</a></li>
                       <li><a href="add_center.php">Add New Center</a></li>
+                    </ul>
+                  </li>
+                   <li><a><i class="fa fa-home"></i> Reports <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="registered_course.php">Registration List</a></li>
+                      <li><a href="add_center.php">Orders</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-home"></i> Teachers <span class="fa fa-chevron-down"></span></a>
