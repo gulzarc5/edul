@@ -40,7 +40,7 @@ include_once "backend/database_connection/connection.php";
 	<div id="enquirypopup" class="modal fade in" role="dialog">
         <div class="modal-dialog">
         	<!-- Modal content-->
-            <div class="modal-content row">
+            <div class="modal-content" style="margin-top: 70px;">
                 <div class="modal-header custom-modal-header">
                     <button type="button" class="close" data-dismiss="modal">×</button>
                     <h4 class="modal-title"></h4>
@@ -57,19 +57,19 @@ include_once "backend/database_connection/connection.php";
 				      <!-- Wrapper for slides -->
 				      <div class="carousel-inner">
 				        <div class="item active">
-				          <img src="images/photo/p1.png" alt="...">
+				          <img class="img-responsive" src="images/photo/p1.png" alt="...">
 				          <div class="carousel-caption">
 				           <!--  <h2>Heading</h2> -->
 				          </div>
 				        </div>
 				        <div class="item">
-				          <img src="images/photo/p2.png" alt="...">
+				          <img class="img-responsive" src="images/photo/p2.png" alt="...">
 				          <div class="carousel-caption">
 				            <!-- <h2>Heading</h2> -->
 				          </div>
 				        </div>
 				        <div class="item">
-				          <img src="images/photo/p3.png" alt="...">
+				          <img class="img-responsive" src="images/photo/p3.png" alt="...">
 				          <div class="carousel-caption">
 				            <!-- <h2>Heading</h2> -->
 				          </div>
@@ -132,7 +132,6 @@ include_once "backend/database_connection/connection.php";
 	<div class="header-body">
 	<nav class="navbar navbar-inverse edu-navbar">
       <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-3">
             <span class="sr-only">Toggle navigation</span>
@@ -143,7 +142,6 @@ include_once "backend/database_connection/connection.php";
           <a href="#" class="navbar-brand  data-scroll"><img src="images/logo.png" alt="" style="width: 200px;"></a>
         </div>
     
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse " id="navbar-collapse-3">
           			<ul class="nav navbar-nav navbar-right  marg-head">
 					<li ><a data-scroll="" href="index.php">HOME</a>
@@ -215,17 +213,20 @@ include_once "backend/database_connection/connection.php";
  	<!--==================
 		Slider
 	===================-->
-	<div class="rev_slider_wrapper">
+	
+	<div class="container-fluid">
+	<div class="row">
+		<iframe src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"  width="100%" height="315"  frameborder="0" allowfullscreen></iframe>
+	</div>
+	</div>
+
+	<!--<div class="rev_slider_wrapper">
        <div id="rev_slider_1" class="rev_slider" style="display:none">
 
-            <!-- BEGIN SLIDES LIST -->
             <ul>
 				<li data-transition="boxfade" data-title="Slide Title" data-param1="Additional Text" data-thumb="images/index/slider-01.jpg">
                 	<div class="slider-overlay"></div>
-					<!-- SLIDE'S MAIN BACKGROUND IMAGE -->
 					<img src="images/index/slider-01.jpg" alt="Sky" class="rev-slidebg">
-					<!-- BEGIN BASIC TEXT LAYER -->
-					<!-- LAYER NR. 1 -->
 					<div class="tp-caption sfr font-extra-bold tp-resizeme letter-space-4 header-1 title-line-1" 
 						data-x="left" data-hoffset="0" 
 						data-y="center" data-voffset="-140" 
@@ -233,7 +234,6 @@ include_once "backend/database_connection/connection.php";
 						style="z-index: 6; font-size:50px; color:#fff; text-transform:uppercase; font-family: 'Montserrat', sans-serif;, serif; white-space: nowrap;font-weight:700; margin-top: 180px;">better education for
 					</div>
 					
-					<!-- LAYER NR. 2 -->
 					<div class="tp-caption sfr font-extra-bold tp-resizeme letter-space-4 header-1 title-line-2" 
 						data-x="left" data-hoffset="0" 
 						data-y="center" data-voffset="-80" 
@@ -243,20 +243,16 @@ include_once "backend/database_connection/connection.php";
 					
 										
 					
-					<!-- LAYER NR. 4 -->
 					<div class="tp-caption lfb tp-resizeme header-btn" 
 						data-x="left" data-hoffset="0" 
 						data-y="center" data-voffset="90" 
 						data-frames='[{"delay":0,"speed":2000,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-						style="z-index: 8;"><!-- <a href="#." class="el-btn-regular slider-btn-left">Get Started Now</a> <a href="#." class="el-btn-regular">View Courses</a> -->
+						style="z-index: 8;"><!-- <a href="#." class="el-btn-regular slider-btn-left">Get Started Now</a> <a href="#." class="el-btn-regular">View Courses</a>
 					</div>
 				</li>
                 <li data-transition="random" data-title="Slide Title" data-param1="Additional Text" data-thumb="images/index/slider-02.jpg">
                 	<div class="slider-overlay"></div>
-					<!-- SLIDE'S MAIN BACKGROUND IMAGE -->
 					<img src="images/index/slider-02.jpg" alt="Sky" class="rev-slidebg">
-					<!-- BEGIN BASIC TEXT LAYER -->
-					<!-- LAYER NR.1 -->
 					<div class="tp-caption sfr font-extra-bold tp-resizeme letter-space-4 header-1 title-line-1" 
 						data-x="left" data-hoffset="0" 
 						data-y="center" data-voffset="-140" 
@@ -264,7 +260,6 @@ include_once "backend/database_connection/connection.php";
 						style="z-index: 6; font-size:50px; color:#fff; text-transform:uppercase; font-family: 'Montserrat', sans-serif;, serif; white-space: nowrap;font-weight:700;margin-top: 180px;">Education is a 
 					</div>
 					
-					<!-- LAYER NR. 2 -->
 					<div class="tp-caption sfr font-extra-bold tp-resizeme letter-space-4  header-1 title-line-2" 
 						data-x="left" data-hoffset="0" 
 						data-y="center" data-voffset="-80" 
@@ -274,7 +269,6 @@ include_once "backend/database_connection/connection.php";
 					
 					
 					
-					<!-- LAYER NR. 4 -->
 					<div class="tp-caption lfb tp-resizeme header-btn" 
 						data-x="left" data-hoffset="0" 
 						data-y="center" data-voffset="90" 
@@ -282,11 +276,11 @@ include_once "backend/database_connection/connection.php";
 						style="z-index: 8;">
 					</div>
 				</li>
-            </ul><!-- END SLIDES LIST -->
+            </ul>
 
-        </div><!-- END SLIDER CONTAINER -->
-    </div>
-
+        </div>
+    </div>-->
+					</div>
 
 
     <!-- END SLIDER CONTAINER WRAPPER -->
