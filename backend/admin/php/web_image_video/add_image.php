@@ -5,6 +5,7 @@ session_start();
 	include "../../../database_connection/connection.php";
 	if ($_POST['add_image']) {
 		$image = $_FILES['image'];
+		$image_type = $_POST['img_type'];
 		$image_name	= null;
 		if (isset($image)){
        		$image_name	 = $image['name'];
@@ -22,7 +23,7 @@ session_start();
        		}
 	 	}
 
-	 	$sql = "INSERT INTO `gallery`(`id`, `source`, `type`, `date_added`) VALUES (null,'$image_name','1',date('now'))";
+	 	$sql = "INSERT INTO `gallery`(`id`, `source`, `type`, `date_added`) VALUES (null,'$image_name','$image_type',date('now'))";
 	 	if ($res = $connection->query($sql)) {
 	 		header("location:../../add_image_form.php?msg=1");
 	 	}else{

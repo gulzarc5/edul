@@ -51,16 +51,14 @@ include_once "../database_connection/connection.php";
 
             <!-- menu profile quick info -->
             <div class="profile clearfix">
-              <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-              </div>
+              
               <div class="profile_info">
-                <span>Welcome,</span>
-                <h2><?php 
+                <span>Welcome <h2><?php 
                 if (!empty($_SESSION['name'])) {
                   echo $_SESSION['name'];
                 }
-                ?></h2>
+                ?></h2></span>
+                
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -74,38 +72,40 @@ include_once "../database_connection/connection.php";
                 <ul class="nav side-menu">
                   <li><a href="deshboard.php"><i class="fa fa-home"></i> Home</span></a>
                   </li>
-                  <li><a><i class="fa fa-home"></i> Course <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-book"></i> Course <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="add_new_course.php">Add New Course</a></li>
                       <li><a href="add_new_batch.php">Add New Batch</a></li>
                       <li><a href="batch_list.php">Batch List</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-home"></i> Centers <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-university"></i> Centers <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="center_list.php">Center List</a></li>
                       <li><a href="add_center.php">Add New Center</a></li>
                     </ul>
                   </li>
-                   <li><a><i class="fa fa-home"></i> Reports <span class="fa fa-chevron-down"></span></a>
+                   <li><a><i class="fa fa-print"></i> Reports <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="registered_course.php">Registration List</a></li>
+                      <li><a href="registered_course.php">Registration List(Unpaid)</a></li>
+                      <li><a href="registered_course_paid.php">Registration List(Paid)</a></li>
                       <li><a href="add_center.php">Orders</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-home"></i> Teachers <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="glyphicon glyphicon-user"></i> Teachers <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="add_teacher_form.php">Add New Teacher</a></li>
                       <li><a href="teacher_list.php">Teachers List</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-home"></i> Images <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="glyphicon glyphicon-picture"></i> Images <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="web_image_list.php">Images</a></li>
+                      <li><a href="web_image_list.php">Gallery Images</a></li>
+                      <!-- <li><a href="add_popup_image.php">Popup Images</a></li> -->
                       <li><a href="add_image_form.php">Upload Images</a></li>
                     </ul>
                   </li>
-                   <li><a><i class="fa fa-home"></i> Videos <span class="fa fa-chevron-down"></span></a>
+                   <li><a><i class="glyphicon glyphicon-facetime-video"></i> Videos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="web_video_list.php">Videos</a></li>
                       <li><a href="add_videos_form.php">Upload Video</a></li>
@@ -115,20 +115,7 @@ include_once "../database_connection/connection.php";
                  
                 </ul>
               </div>
-              <div class="menu_section">
-                <h3>Live On</h3>
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="e_commerce.html">E-commerce</a></li>
-                      <li><a href="projects.html">Projects</a></li>
-                      <li><a href="project_detail.html">Project Detail</a></li>
-                      <li><a href="contacts.html">Contacts</a></li>
-                      <li><a href="profile.html">Profile</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+              
 
             </div>
             <!-- /sidebar menu -->
@@ -154,14 +141,13 @@ include_once "../database_connection/connection.php";
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Profile</a></li>
+                    
                     <li>
                       <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
+                        <span class="badge bg-red pull-right">5</span>
+                        <span>Notification</span>
                       </a>
                     </li>
-                    <li><a href="javascript:;">Help</a></li>
                     <li><a href="admin_login/admin_logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
@@ -173,57 +159,9 @@ include_once "../database_connection/connection.php";
                   </a>
                   <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                     <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
                       <div class="text-center">
                         <a>
-                          <strong>See All Alerts</strong>
+                          <strong>View</strong>
                           <i class="fa fa-angle-right"></i>
                         </a>
                       </div>

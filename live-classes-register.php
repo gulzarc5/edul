@@ -75,7 +75,14 @@ function showcity($connection,$state,$city = null){
                 </table>
               </div>    
           </div>
-         
+         <?php
+          if (!empty($_SESSION['user_id'])) {
+             $sql_user_data = "SELECT * FROM `users` WHERE `id`='$_SESSION[user_id]'";
+             if ($res_user_data = $connection->query($sql_user_data)) {
+                 $user_info = $res_user_data->fetch_assoc();
+              } 
+          }
+         ?>
           <form class="form-horizontal" action="web_site_php/course_registration.php" method="post">
             <table class="table table-striped" style="margin-top: 20px;">
               <tbody>
@@ -85,23 +92,50 @@ function showcity($connection,$state,$city = null){
                       <table  style="margin-bottom: 139px;" >
                         <tr>
                           <td>
+                      <?php
+                      if (!empty($user_info['f_name'])) {
+                      ?>
                       <div class="form-group">
                         <label class="col-md-4 control-label">Full Name:*</label>
                         <div class="col-md-8">
-                          <input name="student_name" placeholder="Enter Full Name" class="form-control" required="true"  type="text">
+                          <input name="student_name" placeholder="Enter Full Name" class="form-control" value="<?php echo $user_info['f_name'].' '.$user_info['l_name']; ?>" required="true"  type="text" disabled>
                         </div>
                       </div>
+                      <?php
+                      }else{
+                      ?>
+                      <div class="form-group">
+                        <label class="col-md-4 control-label">Full Name:*</label>
+                        <div class="col-md-8">
+                          <input name="student_name" placeholder="Enter Full Name" class="form-control" required="true"  type="text" >
+                        </div>
+                      </div>
+                      <?php
+                    }
+                      ?>
                       </td>
                     </tr>
                         
                       <tr>
-                      <td>   
-                      <div class="form-group">
+                      <td>  
+                      <?php
+                      if (!empty($user_info['mobile'])) {
+                      
+                      print '<div class="form-group">
+                        <label class="col-md-4 control-label">Mobile:*</label>
+                        <div class="col-md-8">
+                          <input  name="mobile" placeholder="Enter Mobile Number" class="form-control" required="true" value="'.$user_info['mobile'].'" type="text" disabled>
+                        </div>
+                      </div>';
+                    }else{
+                      print '<div class="form-group">
                         <label class="col-md-4 control-label">Mobile:*</label>
                         <div class="col-md-8">
                           <input  name="mobile" placeholder="Enter Mobile Number" class="form-control" required="true" value="" type="text">
                         </div>
-                      </div>
+                      </div>';
+                    }
+                     ?> 
                     </td>
                   </tr>
                   <tr>
@@ -150,9 +184,16 @@ function showcity($connection,$state,$city = null){
                     <tr>
                       <td>
                       <div class="form-group">
-                        <label class="col-md-4 control-label">Address Line 1:*</label>
+                        <label class="col-md-4 control-label">Address Line 1: </label>
                         <div class="col-md-8">
-                          <textarea class="form-control" placeholder="Enter Address 1" rows="5" name="address1"></textarea>
+                          <?php
+                          if (!empty($user_info['address'])) {
+                            print '<textarea class="form-control" placeholder="Enter Address 1" rows="5" name="address1">'.$user_info['address'].'</textarea>';
+                          }else{
+                            print '<textarea class="form-control" placeholder="Enter Address 1" rows="5" name="address1"></textarea>';
+                          }
+                          ?>
+                          
                         </div>
                       </div>
                     </td>
@@ -163,7 +204,7 @@ function showcity($connection,$state,$city = null){
                       <div class="form-group">
                         <label class="col-md-4 control-label">State:*</label>
                         <div class="col-md-8">
-                          <select class="form-control" id="state_sarch" name="state">
+                          <select class="form-control" id="state_sarch" name="state" required="true">
                             <option value="" selected>Please Select State</option>
                             <?php showState($connection) ?>
                           </select>
@@ -225,16 +266,37 @@ function showcity($connection,$state,$city = null){
                        ?>
                      
                    <tr>
+                     <?php
+                      if (!empty($user_info['email'])) {
+                      ?>
                     <td>
                       <div class="form-group">
                         <label class="col-md-4 control-label">Email:*</label>
                         <div class="col-md-8">
-                          <input  name="email" placeholder="Enter Email" class="form-control" required="true" value="" type="text">
+                          <input  name="email" id="email_check" placeholder="Enter Email" class="form-control" required="true" value="<?php echo $user_info['email'];?>" type="text" disabled>
                         </div>
+                        
                       </div>
+                      <div id="emailmsg"></div>
+                    </td>
+                    <?php
+                       }else{
+                       ?>
+                       <td>
+                      <div class="form-group">
+                        <label class="col-md-4 control-label">Email:*</label>
+                        <div class="col-md-8">
+                          <input  name="email" placeholder="Enter Email" class="form-control" required="true" id="email_check"  type="text">
+                        </div>
+                        
+                      </div>
+                      <div  class="col-md-4"></div>
+                      <div id="emailmsg" class="col-md-8"></div>
                     </td>
                   </tr>
-
+                   <?php
+                       }
+                       ?>
                     <tr>
                       <td>
                       <div class="form-group">
@@ -279,10 +341,12 @@ function showcity($connection,$state,$city = null){
                       <div class="form-group">
                         <label class="col-md-4 control-label">Registration Type:*</label>
                        <div class="col-md-8">
-                          <select class="form-control" id="" name="registration">
-                            <option> 1</option>
-                            <option>2</option>
-                            <option >3</option>
+                          <select class="form-control" id="" name="registration_type" required>
+                            <option value='' selected>Please Select Type</option>
+                            <option value='CA'> CA</option>
+                            <option value="CS">CS</option>
+                            <option value="School/College">School/College</option>
+                            <option value="Others">Others</option>
                           </select>
                         </div>
                       </div>
@@ -292,9 +356,9 @@ function showcity($connection,$state,$city = null){
                   <tr>
                       <td>
                       <div class="form-group">
-                        <label class="col-md-4 control-label">CA:*</label>
+                        <label class="col-md-4 control-label">Registration No:*</label>
                         <div class="col-md-8">
-                          <input  name="CA" placeholder="CA" class="form-control" required="true" value="" type="text">
+                          <input  name="registration_no" placeholder="Registration No/Name" class="form-control" required="true" value="" type="text">
                         </div>
                       </div>
                     </td>
@@ -314,7 +378,7 @@ function showcity($connection,$state,$city = null){
                     <tr>
                       <td>  
                       <div class="form-group">
-                        <label class="col-md-4 control-label">Address Line2:*</label>
+                        <label class="col-md-4 control-label">Address Line2: </label>
                         <div class="col-md-8">
                           <textarea class="form-control" rows="5" name="address2"></textarea>
                         </div>
@@ -327,7 +391,7 @@ function showcity($connection,$state,$city = null){
                       <div class="form-group">
                         <label class="col-md-4 control-label">City*</label>
                         <div class="col-md-8">
-                          <select class="form-control" id="city_reg" name="city">
+                          <select class="form-control" id="city_reg" name="city" required="true">
                             <option value="" selected>Please Select City</option>
                           </select>
                           </div>
@@ -356,7 +420,7 @@ function showcity($connection,$state,$city = null){
               </tbody>
             </table>
           <div class="form-group register-btn">
-             <button type="submit" name="student_reg" value="student_reg" class="btn btn-success">I Aggree,Pay Now</button>
+             <button type="submit" name="student_reg" value="student_reg" class="btn btn-success">Submit</button>
           </div>
         </form>
        </div>
@@ -404,4 +468,29 @@ $j(document).ready(function(){
 </script>
 
 
+<script>
+$j(document).ready(function(){
+
+    $j("#email_check").blur(function(){
+         email =$j(this).val();
+         // alert(email);
+        // window.location.href = "live-classes.php?stat="+state+"";
+        $.ajax({
+        type: "POST",
+        url: "ajax/email_check.php",
+        data:{ email : email,},
+        success: function(data){
+            console.log(data);
+            if (data == 1) {
+               $j("#emailmsg").html('<p id="emailmsg" class="alert alert-danger">Email Already Exist</p>');
+               $j("#email_check").val('');
+            }else{
+               $j("#emailmsg").html('');
+            }
+        }
+        });
+  });
+});
+
+</script>
   

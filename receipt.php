@@ -26,14 +26,16 @@ include('include/header.php');
   <div class="row">
     <div class="col-md-4">
     </div>
-    <div class="col-md-12" id="print_div">
+    
       <div class="">
         <div class="row">
          
         </div>
+        
         <div class="panel panel-default">
           <!--<div class="panel-heading"><h5>Complete Online Admission Form In Quick 4 Steps!!!</h5></div>-->
           <div class="panel-body">
+            <div id="print_div">
             <div class="row text-center"> 
           <div class="col-md-12">
             <h3 class="title-content">Thank You for Registering for the Course</h3>
@@ -105,8 +107,6 @@ include('include/header.php');
                       </th>
                       <th scope="col">Total Fees (In Rs.)
                       </th>
-                      <th scope="col">Action
-                      </th>
                     </tr>
                     <tr>
                       <td align="center">1
@@ -126,8 +126,9 @@ include('include/header.php');
                       ?>
                       
                       
-                     
-                      <td align="center">
+                     </tr>
+                     <tr>
+                      <td align="center" colspan="6">
                         <!--<a href="center-details.php?&id=136" target="_blank"><img src="images/page_white_magnify.png">                                 </a>-->
                        
                           <button class="btn btn-primary" onclick="printDiv() "><i class="fa fa-print" aria-hidden="true">  Print</i></button>
@@ -138,11 +139,33 @@ include('include/header.php');
                 </table>
               </div>    
             </div>
-            <!-- ###################################################### -->    
+            <!-- ###################################################### --> 
+</div>
+           <div class="row">
+            <h3 class="pdd"> &nbsp; &nbsp; Account Details</h3>
+            <p class="pdd">&nbsp; &nbsp; Please pay your fees through cash deposit or deman dreaft , Account details given below</p>
+          </div>  
+          <div class="table-responsive tblpd"> 
+            <table class="table table-striped table-bordered table-hover" id="tblcenterlist" style="color:#333333;font-size:11px;" cellspacing="0" cellpadding="3">
+              <tbody>
+                <tr class="headerStyle" align="center">
+                  <th align="center">S#</th>
+                  <th align="center">Name Of Account</th>
+                  <th align="center">Bank Name</th>
+                  <th align="center">Branch Name</th>
+                  <th align="center">IFSC Code</th>
+                  <th align="center">In favour of</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>  
           </div>
         </div>
-      </div>
-    </div> 
+
+    </div>
+
+    
+
   </div>
 </div>
 <!-- ############## Content Start Here ################# -->
