@@ -7,27 +7,28 @@
 				<div class="col-md-4" >
 					<span><img src="images/flogo.png" alt="" style="width: 200px; padding-bottom: 10px; "></span>
 
-					<p>We are Edulounge, creat your passion and inspiration.The unique blend of outstanding mentoring and meticulous study. And hope success will come for your dream. </p>
+					<p>We at Edulounge area unit a team of dedicated professionals having a vivid expertise within the field of Education. Our mission is to produce a platform for college students wherever they not solely gain prime quality education, however associate degree overall comprehensive growth.</p>
 					
 				</div>
 
 				
 
-				<div class="col-md-5 text-center">
+				<div class="col-md-5">
 					<div class="col-md-12">
-					<div class="col-md-6 text-center">
+					<div class="col-md-6">
 					<h3>QUICK LINKS</h3>
-					<ul >
+					
 					<ul class="list-unstyled">
 						<li><a href="index.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Home</a></li>
-						<li><a href="gallery.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Gallery</a></li>
-						<li><a href="buy-books.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Buy Books</a></li>
 						<li><a href="about-us.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>About Us</a></li>
-						<li><a href="contact.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Contact Us</a></li>
+						<li><a href="live-classes.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Live Classes</a></li>
+						<li><a href="buy-books.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Buy Books</a></li>
 						<li><a href="pen-drive-classes.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Pen Drive Classes</a></li>
-					</ul>
-				</ul>
-			</div>
+						<li><a href="photos.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Photos</a></li>
+						<li><a href="videos.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Videos</a></li>
+						<li><a href="contact.php"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Contact Us</a></li>
+						</ul>
+					</div>
 <?php
 if (!empty($_SESSION['user_id']) && !empty($_SESSION['email'])){
 	?>
@@ -54,7 +55,7 @@ if (!empty($_SESSION['user_id']) && !empty($_SESSION['email'])){
 						 <li> 
 						<li><span><i class="fa fa-phone footer-icon"></i></span><a href="tel:+91 94351 41741">+91 94351 41741</a></li>
 						<li><span><i class="fa fa-envelope footer-icon"></i></span><a href="mailto:info@edulounge.com">info@edulounge.com</a></li>
-						<li><span><i class="fa fa-map-marker footer-icon"></i></span>EduLounge,2nd floor, Opus Pinnacle,Opposite Sonaram Field,Above Ti Ford Showroom,Bharalumukh,Guwahati</li>
+						<li><span><i class="fa fa-map-marker footer-icon"></i></span>EduLounge, 2nd floor, Opus Pinnacle, Opposite Sonaram Field, Above Ti Ford Showroom, Bharalumukh, Guwahati</li>
 					</ul>
 
 					<!-- <form action="#">

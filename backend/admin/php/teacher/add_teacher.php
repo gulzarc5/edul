@@ -9,6 +9,7 @@ session_start();
 		$gender = $connection->real_escape_string(mysql_entities_fix_string($_POST['gender']));
 		$b_day = $connection->real_escape_string(mysql_entities_fix_string($_POST['b_day']));
 		$qualification = $connection->real_escape_string(mysql_entities_fix_string($_POST['qualification']));
+		$subject = $connection->real_escape_string(mysql_entities_fix_string($_POST['subject']));
 		$about = $connection->real_escape_string(mysql_entities_fix_string($_POST['about']));
 		$image = $_FILES['image'];
 		$image_name	= null;
@@ -26,7 +27,7 @@ session_start();
        		}
 	 	}
 
-	 	$sql = "INSERT INTO `teachers`(`id`, `name`, `email`, `mobile`, `gender`, `dob`, `qualification`, `about`, `image`, `added_date`) VALUES (null,'$teacher_name','$email','$mobile','$gender','$b_day','$qualification','$about','$image_name',date('now'))";
+	 	$sql = "INSERT INTO `teachers`(`id`, `name`, `email`, `mobile`, `gender`, `dob`, `qualification`,`subjects`, `about`, `image`, `added_date`) VALUES (null,'$teacher_name','$email','$mobile','$gender','$b_day','$qualification','$subject','$about','$image_name',CURRENT_TIMESTAMP)";
 	 	if ($res = $connection->query($sql)) {
 	 		header("location:../../add_teacher_form.php?msg=1");
 	 	}else{

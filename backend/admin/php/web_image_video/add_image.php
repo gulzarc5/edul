@@ -25,7 +25,7 @@ session_start();
        		}
 	 	}
 
-	 	$sql = "INSERT INTO `gallery`(`id`, `source`, `type`, `category`, `date_added`) VALUES (null,'$image_name','$image_type','$category',date('now'))";
+	 	$sql = "INSERT INTO `gallery`(`id`, `source`, `type`, `category`, `date_added`) VALUES (null,'$image_name','$image_type','$category',CURRENT_TIMESTAMP)";
 	 	if ($res = $connection->query($sql)) {
 	 		header("location:../../add_image_form.php?msg=1");
 	 	}else{

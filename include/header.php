@@ -62,7 +62,7 @@ include_once "backend/database_connection/connection.php";
 					</ul>
 				</div>
 				<div class="col-sm-2 col-xs-12 header-top-right blink">
-					<a href="#" class="navbar-brand  data-scroll "><img class="blink-image" src="images/blogo.png"style="width: 100px;"></a>
+					<a href="http://thinkclat.webinfotech.net.in/" class="navbar-brand  data-scroll "><img class="blink-image" src="images/blogo.png"style="width: 100px;"></a>
 				</div>
 			</div>
 		</div>
@@ -119,7 +119,7 @@ include_once "backend/database_connection/connection.php";
                                 <li><a href="videos.php">VIDEOS</a></li>
 			            </ul>
 			          </li>
-			          <li ><a data-scroll href="contact.php">CONTACT</a></li>
+			          <li ><a data-scroll href="contact.php">CONTACT US</a></li>
 					 <li><a data-scroll href="#"><i class="fa fa-search search_btn"></i></a>
 						<div id="search">
 						  	<button type="button" class="close">×</button>

@@ -145,7 +145,7 @@ include('include/header.php');
 				<div class="row">
 					<div class="col-sm-5">
 						<div class="contact-form text-center">
-							<img src="images/teachars/12.png" alt="" class="img-responsive">
+							<img src="images/teachars/13.png" alt="" class="img-responsive">
  														
 						</div>
 					</div>
@@ -177,43 +177,44 @@ include('include/header.php');
     <div class="singleservice"> 
 
     <img class="serviceicon" src="images/fafa/6.png">
-    <h2 class="servicetitle">
+    <h6 class="servicetitle">
    Professional & Experienced faculties
-    </h2>
+    </h6>
 
     </div>
     <div class="singleserviceb">  
+    <img class="serviceicon" src="images/fafa/1.png">
+    <h6 class="servicetitle">
+    Strategy setting & Motivational support
+    </h6>
+
+    </div>
+    <div class="singleservice">  
+    <img class="serviceicon" src="images/fafa/3.png">
+    <h6 class="servicetitle">
+   Personal attention & counselling
+    </h6>  
+
+    </div>
+        <div class="singleserviceb">  
     <img class="serviceicon" src="images/fafa/5.png">
-    <h2 class="servicetitle">
+    <h6 class="servicetitle">
     Centrally located premises
-    </h2>
+    </h6>
 
     </div>
     <div class="singleservice">  
     <img class="serviceicon" src="images/fafa/4.png">
-    <h2 class="servicetitle">
-    State of art infrastructure
-    </h2>  
+    <h6 class="servicetitle">
+    State of art infrastructure 
+    </h6>
+    </div>
 
-    </div>
-        <div class="singleserviceb">  
-    <img class="serviceicon" src="images/fafa/3.png">
-    <h2 class="servicetitle">
-    Personal attention & counselling
-    </h2>
-
-    </div>
-    <div class="singleservice">  
-    <img class="serviceicon" src="images/fafa/2.png">
-    <h2 class="servicetitle">
-    Regular tests
-    </h2>
-    </div>
     <div class="singleserviceb">  
-    <img class="serviceicon" src="images/fafa/1.png">
-    <h2 class="servicetitle">
-    Strategy setting & Motivational support
-    </h2>  
+    <img class="serviceicon" src="images/fafa/2.png">
+    <h6 class="servicetitle">
+     Regular tests 
+    </h6>  
     </div>
 </div>
 

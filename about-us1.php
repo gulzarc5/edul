@@ -229,7 +229,7 @@ include('include/header.php');
 				<?php
 					 getTeacherDetails($connection); 
 				?>
-                <!-- <div class="tab-pane active" id="a">
+                <div class="tab-pane active" id="a">
                     <div class="row">
 						<div class="col-sm-3 t-profile-left">
 							<div class="teacher-contact">

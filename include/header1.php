@@ -147,7 +147,7 @@ include_once "backend/database_connection/connection.php";
 					</ul>
 				</div>
 				<div class="col-sm-2 col-xs-12 header-top-right blink">
-					<a href="#" class="navbar-brand  data-scroll "><img class="blink-image" src="images/blogo.png"style="width: 100px;"></a>
+					<a href="http://thinkclat.webinfotech.net.in/" class="navbar-brand  data-scroll "><img class="blink-image" src="images/blogo.png"style="width: 100px;"></a>
 				</div>
 			</div>
 			</div>
@@ -169,11 +169,11 @@ include_once "backend/database_connection/connection.php";
     
         <div class="collapse navbar-collapse " id="navbar-collapse-3">
           			<ul class="nav navbar-nav navbar-right  marg-head">
-					<li ><a data-scroll="" href="index.php">HOME</a>
+					<li ><a data-scroll="" href="index.php" style="color: #03a9f9;">HOME</a>
 					</li>
 
 					<li class="dropdown">
-			            <a class="dropdown-toggle"  href="about-us.php">
+			            <a class="dropdown-toggle"  href="about-us.php" style="color: #03a9f9;">
 			             ABOUT US
 			            </a>
 			            <ul class="dropdown-menu" role="menu">
@@ -182,11 +182,11 @@ include_once "backend/database_connection/connection.php";
 			            </ul>
 			          </li>
 
-					<li><a data-scroll="" href="live-classes.php">LIVE CLASSES</a>
+					<li><a data-scroll="" href="live-classes.php" style="color: #03a9f9;">LIVE CLASSES</a>
 					</li>
 
 					<li class="dropdown">
-			            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #03a9f9;">
 			             e-LEARNING
 			            </a>
 			            <ul class="dropdown-menu" role="menu">
@@ -196,7 +196,7 @@ include_once "backend/database_connection/connection.php";
 			          </li>
 
 			          <li class="dropdown">
-			            <a class="dropdown-toggle"  href="gallery.php">
+			            <a class="dropdown-toggle"  href="#" style="color: #03a9f9;">
 			             GALLERY
 			            </a>
 			            <ul class="dropdown-menu" role="menu">
@@ -204,13 +204,13 @@ include_once "backend/database_connection/connection.php";
                                 <li><a href="videos.php">VIDEOS</a></li>
 			            </ul>
 			          </li>
-			          <li ><a data-scroll href="contact.php">CONTACT</a></li>
+			          <li ><a data-scroll href="contact.php" style="color: #03a9f9;">CONTACT US</a></li>
 					 <li><a data-scroll href="#"><i class="fa fa-search search_btn"></i></a>
 						<div id="search">
 						  	<button type="button" class="close">×</button>
 						 	 <form>
 						   		 <input type="search" value="" placeholder="Search here...."  required/>
-						   		 <button type="submit" class="btn btn_common blue">Search</button>
+						   		 <button type="submit" class="btn btn_common blue" style="color: #03a9f9;">Search</button>
 						 	 </form>
 						</div>
 					</li> 
@@ -241,7 +241,12 @@ include_once "backend/database_connection/connection.php";
 	
 	<div class="container-fluid">
 	<div class="row">
-		<iframe src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"  width="100%" height="400"  frameborder="0" allowfullscreen></iframe>
+
+
+		<iframe src="https://www.youtube.com/embed/z0kqk9uA7ww?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"  width="100%" height="550"  frameborder="0" allowfullscreen></iframe> 
+		<!-- <iframe width="100%" height="400" src="https://www.youtube.com/embed/z0kqk9uA7ww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+		<!-- <iframe src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"  width="100%" height="400"  frameborder="0" allowfullscreen></iframe>  -->
 	</div>
 	</div>
 

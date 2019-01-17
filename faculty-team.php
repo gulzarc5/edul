@@ -33,11 +33,13 @@ function getTeacherDetails($connection){
 										<div class="profile__courses__inner">
 											<ul class="profile__courses__list list-unstyled">
 												<li><i class="fa fa-graduation-cap"></i>Qualifications :</li>
-												 <li><i class="fa fa-bookmark"></i>About :</li><br><br><br>
+												 <li><i class="fa fa-bookmark"></i>Subjects :</li>
+												 <li><i class="fa fa-bookmark"></i>>Achievements/Experience : :</li><br><br><br>
 												
 											</ul>
 											<ul class="profile__courses__right list-unstyled">
 												<li>'.$teacherDet['qualification'].'</li>
+												<li>'.$teacherDet['subjects'].'</li>
 												<li>'.$teacherDet['about'].'</li>
 											</ul>
 										</div>
@@ -73,11 +75,13 @@ function getTeacherDetails($connection){
 										<div class="profile__courses__inner">
 											<ul class="profile__courses__list list-unstyled">
 												<li><i class="fa fa-graduation-cap"></i>Qualifications :</li>
-												 <li><i class="fa fa-bookmark"></i>About :</li><br><br><br>
+												 <li><i class="fa fa-bookmark"></i>Subjects :</li>
+												 <li><i class="fa fa-bookmark"></i>>Achievements/Experience : :</li><br><br><br>
 												
 											</ul>
 											<ul class="profile__courses__right list-unstyled">
-												<li>'.$teacherDet['qualification'].'</li>
+												<li><b>'.$teacherDet['qualification'].'</b></li>
+												<li>'.$teacherDet['subjects'].'</li>
 												<li>'.$teacherDet['about'].'</li>
 											</ul>
 										</div>
@@ -142,14 +146,14 @@ function getTeacherDetails($connection){
     <div class="row">
         <div class="tabbable tabs-left">
 		
-            <ul class="nav nav-tabs col-md-7" style="background-color: #0000ff96; ">
+            <ul class="nav nav-tabs col-md-5" style="background-color: #0000ff96;border-radius: 20px;padding-left: 23px;">
             	<?php getTeachers($connection); ?>
                
               
                
             </ul>
 			
-			<div class="tab-content col-md-5">
+			<div class="tab-content col-md-7" style="padding-right: 0px;">
 				<?php getTeacherDetails($connection); ?>
 			
            

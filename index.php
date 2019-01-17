@@ -11,9 +11,9 @@ include('include/header1.php');
 			<div class="col-sm-4 content_body slide_cont_box_01">
 				<div class="slider-btm-box btm-item_01">
 					<img src="images/index/1.png" alt="" class="btm-item-icon">
-					<h3>PEN DRIVE CLASSES</h3>
+					<h3>BUY PEN DRIVE </h3>
 					<p></p>
-					<a href="e-learning.html">read more<i class="fa fa-long-arrow-right slider-b-btn-icon"></i></a>
+					<a href="pen-drive-classes.php">read more<i class="fa fa-long-arrow-right slider-b-btn-icon"></i></a>
 				</div>
 			</div>
 
@@ -22,16 +22,16 @@ include('include/header1.php');
 					<img src="images/index/3.png" alt="" class="btm-item-icon">
 					<h3>BUY BOOKS</h3>
 					<p></p>
-					<a href="buy-books.html">read more<i class="fa fa-long-arrow-right slider-b-btn-icon"></i></a>
+					<a href="buy-books.php">read more<i class="fa fa-long-arrow-right slider-b-btn-icon"></i></a>
 				</div>
 			</div>
 
 			<div class="col-sm-4 content_body slide_cont_box_03">
 				<div class="slider-btm-box btm-item_03">
 					<img src="images/index/2.png" alt="" class="btm-item-icon">
-					<h3>LIVE CLASSES</h3>
+					<h3>REGISTRATION NOW</h3>
 					<p></p>
-					<a href="gallery.html">read more<i class="fa fa-long-arrow-right slider-b-btn-icon"></i></a>
+					<a href="live-classes.php">read more<i class="fa fa-long-arrow-right slider-b-btn-icon"></i></a>
 				</div>
 			</div>
 
@@ -59,7 +59,7 @@ include('include/header1.php');
 			</div><!-- Ends: . -->
 			
 			<div class="col-sm-6 welcome-img">
-				<img src="images/index/122.png" alt="" class="img-responsive">
+				<img src="images/photo/p34.png" alt="" class="img-responsive">
 			</div><!-- Ends: . -->					
 		</div>
 	</div>
@@ -106,11 +106,11 @@ include('include/header1.php');
 							</li> -->								
 						</ul>
 					</div>
-					<div class="courses-content">
+					<!-- <div class="courses-content">
 						<div class="view_more_btn">
 					<a href="#" class="view-more-item">view more</a>
 				</div>
-					</div>
+					</div> -->
 				</div><!-- Ends: .single courses -->
 			</div><!-- Ends: . -->
 
@@ -130,11 +130,11 @@ include('include/header1.php');
 							</li> -->								
 						</ul>
 					</div>
-					<div class="courses-content">
+					<!-- <div class="courses-content">
 						<div class="view_more_btn">
 					<a href="#" class="view-more-item">view more</a>
 				</div>
-					</div>
+					</div> -->
 				</div><!-- Ends: .single courses -->
 			</div><!-- Ends: . -->
 
@@ -154,11 +154,11 @@ include('include/header1.php');
 							</li> -->								
 						</ul>
 					</div>
-					<div class="courses-content">
+					<!-- <div class="courses-content">
 						<div class="view_more_btn">
 					<a href="#" class="view-more-item">view more</a>
 				</div>
-					</div>
+					</div> -->
 				</div><!-- Ends: .single courses -->
 			</div><!-- Ends: . -->									
 		</div>
@@ -311,14 +311,13 @@ include('include/header1.php');
           <div class="item active">
             <blockquote>
               <div class="row">
-                <div class="col-sm-3 text-center">
-                  <img class="img-circle" src="images/testimonial/1.png" style="width: 100px;height:100px;">
-                  <!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
-                </div>
-                <div class="col-sm-9">
+                <!-- <div class="col-sm-2 text-center">
+                 <img class="img-circle" src="images/testimonial/1.png" style="width: 100px;height:100px;"> 
+              </div> -->
+                <div class="col-sm-12">
                   <p>Sir, I had clear my group 2 exams in November and i am a chartered Now. I didnot communication my results back then please my sincere apology. I would like to thank you for not just teaching me ISCA infact the best thing i have learnt from you is how to carry yourself. Thank you sir for helping me secure 59 in ISCA. I will always have a fond memory of you going forward in life.</p>
                   <h3></h3>
-					<small>Sorabh Jain</small>
+					<small class="text-center">Sorabh Jain</small>
                 </div>
               </div>
             </blockquote>
@@ -327,13 +326,13 @@ include('include/header1.php');
           <div class="item">
             <blockquote>
               <div class="row">
-                <div class="col-sm-3 text-center">
+                <!-- <div class="col-sm-3 text-center">
                   <img class="img-circle" src="images/testimonial/2.png" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
+                </div> -->
+                <div class="col-sm-12">
                  <p>Dear Sir, I want to thank you for helping me clear my CA inter group2. I got 62 marks in ITSM. I was not able to clear the group only because of this paper and in my NOV17 attempt. I got 32 in ITSM.
 				 You helped me a lot in clearing the group. Thank you once again Sir.</p>
-                  <small>Neina Devi</small>
+                  <small class="text-center">Neina Devi</small>
                 </div>
               </div>
             </blockquote>
@@ -342,12 +341,12 @@ include('include/header1.php');
           <div class="item">
             <blockquote>
               <div class="row">
-                <div class="col-sm-3 text-center">
+                <!-- <div class="col-sm-3 text-center">
                   <img class="img-circle" src="images/testimonial/5.png" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
+                </div> -->
+                <div class="col-sm-12">
                   <p>Sir it was efforts in ISCA that made me score 72....Thank you so much sir...Your are the best faculty in ISCA.</p>
-                  <small>Neha Dhariwal</small>
+                  <small class="text-center">Neha Dhariwal</small>
                 </div>
               </div>
             </blockquote>
@@ -356,12 +355,12 @@ include('include/header1.php');
             <div class="item">
             <blockquote>
               <div class="row">
-                <div class="col-sm-3 text-center">
+                <!-- <div class="col-sm-3 text-center">
                   <img class="img-circle" src="images/testimonial/4.png" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
+                </div> -->
+                <div class="col-sm-12">
                  <p>Thank you so much Sir for your constant support and guidance....Loved the way you taught and encouraged in the class.... I was always weak in theary but the way you made us understand the concepts and also how the read theory subjects was just super amazing....Now my fear of theory subjects has gone down considerably....Thank you so much sir</p>
-                  <small>Deep</small>
+                  <small class="text-center">Deep</small>
                 </div>
               </div>
             </blockquote>
@@ -370,12 +369,12 @@ include('include/header1.php');
             <div class="item">
             <blockquote>
               <div class="row">
-                <div class="col-sm-3 text-center">
+                <!-- <div class="col-sm-3 text-center">
                   <img class="img-circle" src="images/testimonial/3.png" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
+                </div> -->
+                <div class="col-sm-12" style="margin-top: 30px;">
                  <p>Thank You Sir...I got 74 marks...This is only because of your motivation...Thank You so much.</p>
-                  <small>Sapna</small>
+                  <small class="text-center">Sapna</small>
                 </div>
               </div>
             </blockquote>
@@ -384,13 +383,13 @@ include('include/header1.php');
             <div class="item">
             <blockquote>
               <div class="row">
-                <div class="col-sm-3 text-center">
+               <!--  <div class="col-sm-3 text-center">
                   <img class="img-circle" src="images/testimonial/6.png" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
+                </div> -->
+                <div class="col-sm-12">
                  <p>Dear Sir, I want to thank you for helping me clear my CA inter group2. I got 62 marks in ITSM. I was not able to clear the group only because of this paper and in my NOV17 attempt. I got 32 in ITSM.
 				 You helped me a lot in clearing the group. Thank you once again Sir.</p>
-                  <small>Neina Devi</small>
+                  <small class="text-center">Neina Devi</small>
                 </div>
               </div>
             </blockquote>
@@ -399,10 +398,10 @@ include('include/header1.php');
             <div class="item">
             <blockquote>
               <div class="row">
-                <div class="col-sm-3 text-center">
+               <!--  <div class="col-sm-3 text-center">
                   <img class="img-circle" src="images/testimonial/7.png" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
+                </div> -->
+                <div class="col-sm-12"style="margin-top: 30px;">
                 <p>Thank you so much bhaiya for your great teaching...it took long to clear but I never failed in ISCA... following your notes and teaching...secored 56 in ISCA...</p>
             </div>
               </div>
@@ -412,12 +411,12 @@ include('include/header1.php');
             <div class="item">
             <blockquote>
               <div class="row">
-                <div class="col-sm-3 text-center">
+                <!-- <div class="col-sm-3 text-center">
                   <img class="img-circle" src="images/testimonial/8.png" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
+                </div> -->
+                <div class="col-sm-12"style="margin-top: 30px;">
                  <p>Thank you so much sir...I cleared second group with 62 in ISCA</p>
-                  <small>Nishant</small>
+                  <small class="text-center">Nishant</small>
                 </div>
               </div>
             </blockquote>
@@ -426,12 +425,12 @@ include('include/header1.php');
           <div class="item">
             <blockquote>
               <div class="row">
-                <div class="col-sm-3 text-center">
+               <!--  <div class="col-sm-3 text-center">
                   <img class="img-circle" src="images/testimonial/9.png" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
+                </div> -->
+                <div class="col-sm-12"style="margin-top: 20px;">
                  <p>I passed my group 2 with 62 in ISCA. All thank you to you, Today I am a chartered accountant, Thank you for all your support.</p>
-                  <small>Hemant Sharma</small>
+                  <small class="text-center">Hemant Sharma</small>
                 </div>
               </div>
             </blockquote>

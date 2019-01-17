@@ -76,8 +76,15 @@ function showMessage($msg){
                         </div>
                       </div>
 
+                      <div class="form-group">
+                        <label for="qualification" class="control-label col-md-3 col-sm-3 col-xs-12">Subjects (put subjects seperated by comma)<span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <textarea  required="required" class="form-control" name="subject" ></textarea>
+                        </div>
+                      </div>
+
                        <div class="form-group">
-                        <label for="about" class="control-label col-md-3 col-sm-3 col-xs-12">About Teacher<span class="required">*</span></label>
+                        <label for="about" class="control-label col-md-3 col-sm-3 col-xs-12">Achievement / Experiance<span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <textarea id="message" required="required" class="form-control" name="about" ></textarea>
                         </div>
