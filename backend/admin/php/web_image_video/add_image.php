@@ -16,7 +16,7 @@ session_start();
        		$ext = strtolower(end($ext_explode));
        		if( $ext=='jpg' || $ext=='jpeg' || $ext=='png' || $ext=='bmp' || $ext=='gif' ){
        			$new = "image/".$image_name;
-       			imageResize($image_tmp_name,$new,200,200);
+       			// imageResize($image_tmp_name,$new,200,200);
        			$image_name = md5(uniqid()).date('now').".".$ext;
        			$path = "../../../uploads/gallery_image/".$image_name ;
        			move_uploaded_file($image_tmp_name,$path);	

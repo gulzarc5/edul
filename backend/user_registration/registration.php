@@ -28,12 +28,6 @@ session_start();
 		$about = $connection->real_escape_string(mysql_entities_fix_string($_POST['about']));
 		$password = password_hash($password, PASSWORD_BCRYPT);
 
-		echo "<br>".$f_name;
-		echo "<br>".$l_name;
-		echo "<br>".$email;
-		echo "<br>".$password;
-		echo "<br>".$mobile;
-		echo "<br>".$about;
 
 		$sql_reg = "INSERT INTO `users`(`id`, `f_name`, `l_name`, `user_type_id`, `email`, `pass`, `mobile`, `state_id`, `city_id`, `address`, `about`, `pin`, `status`, `register_date`) VALUES (null,'$f_name','$l_name','2','$email','$password','$mobile',null,null,null,'$about',null,'1',null)";
 		// $sql_reg ="INSERT INTO `users` (`id`, `f_name`, `l_name`, `user_type_id`, `email`, `pass`, `mobile`, `state_id`, `city_id`, `address`, `about`, `pin`, `status`, `register_date`) VALUES (NULL, 'aaa', 'aaa', '1', 'gulzarc5@gmail.com', '111', '9401943576', NULL, NULL, NULL, 'aaa', NULL, '1', CURRENT_TIMESTAMP)";
