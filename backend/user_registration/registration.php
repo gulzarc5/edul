@@ -8,6 +8,21 @@ session_start();
 		$l_name = $connection->real_escape_string(mysql_entities_fix_string($_POST['l_name']));
 
 		$email = $connection->real_escape_string(mysql_entities_fix_string($_POST['email']));
+
+		if (!empty($email)) {
+			$sql_email_chk ="SELECT * FROM `users` WHERE `email`='$email' AND `user_type_id`='2'";
+		    if ($res_email_chk = $connection->query($sql_email_chk)) {
+		      if ($res_email_chk->num_rows > 0) {
+		          header("location:../../register.php?msg=3");
+		          die();
+		      }
+		    }else{
+		    	header("location:../../register.php?msg=2");
+		    	die();
+		    }	
+		}
+	
+
 		$password = $connection->real_escape_string(mysql_entities_fix_string($_POST['password']));
 		$mobile = $connection->real_escape_string(mysql_entities_fix_string($_POST['mobile']));
 		$about = $connection->real_escape_string(mysql_entities_fix_string($_POST['about']));

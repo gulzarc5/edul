@@ -10,11 +10,14 @@
 		if ($msg == 2) {
 			print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
 		}
+		if ($msg == 3) {
+			print "<p class='alert alert-danger'>Email Id Already Exist</p>";
+		}
 	}
 ?>
-<div class="container-fluid bg-no-overlay">
+<div class="container tophead">
     <div class="row text-center">
-    <h1 style="margin-top: 90px;">Registration</h1>
+    <h1 style="">Registration</h1>
     <p><span><a href="index.php">Home <i class='fa fa-angle-right'></i></a></span> 
     <span>Registration</span></p>
         
@@ -39,10 +42,13 @@
 					<div class="form-group">
 					 	<input autocomplete="off" name="l_name" class="form-control" placeholder="Last Name" type="text">
 					</div>	
-					<div class="form-group" id="emailmsg">
+					<div class="form-group" >
 					 	<input class="required form-control" name="email" placeholder="Email *" type="email" id="email_check">
 					 	
-					</div>					
+					</div>	
+					<div id="emailmsg">
+						
+					</div>				
 
 					<div class="form-group">
 					  <input class="required form-control" name="password" placeholder="Password *"  type="password">
@@ -78,7 +84,7 @@ $j(document).ready(function(){
 
     $j("#email_check").blur(function(){
          email =$j(this).val();
-         alert(email);
+         // alert(email);
         // window.location.href = "live-classes.php?stat="+state+"";
         $.ajax({
         type: "POST",
@@ -87,10 +93,11 @@ $j(document).ready(function(){
         success: function(data){
             console.log(data);
             if (data == 1) {
-            	 $j("#emailmsg").append('<p id="emailmsg" class="alert alert-danger">Email Already Exist</p>');
+            	 $j("#emailmsg").html('<p id="emailmsg" class="alert alert-danger">Email Already Exist</p>');
             	 $j("#email_check").val('');
-            }
-             
+            }else{
+            	$j("#emailmsg").html('');
+            }    
 		}
         });
   });

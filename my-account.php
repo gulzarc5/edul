@@ -34,9 +34,9 @@ function showcity($connection,$state,$city = null){
 
 ?>  
 
-<div class="container-fluid bg-no-overlay">
+<div class="container tophead">
     <div class="row text-center">
-        <h1 style="margin-top: 90px;">My Account</h1>
+        <h1 style="">My Account</h1>
         <p><span><a href="index.php">Home <i class='fa fa-angle-right'></i></a></span> 
         <span>My Account</span></p>
         

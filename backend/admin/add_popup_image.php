@@ -8,8 +8,6 @@ function showMessage($msg){
       print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
     }
   }
-
-
 ?>
 <div class="clearfix"></div>
 <div class="right_col" role="main">
@@ -17,7 +15,7 @@ function showMessage($msg){
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                  	<h2>Add Image <small></small></h2>
+                  	<h2>Add Popup Image <small></small></h2>
                     <div class="clearfix"></div>
                       <?php 
                         if (isset($_GET['msg'])) {
@@ -35,27 +33,6 @@ function showMessage($msg){
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <img id="preview" src="../../images/admin.png" alt="your image" height="200" />
                           <input type="file"  required="required" class="form-control" name="image" onchange="readURL(this);">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="about" class="control-label col-md-3 col-sm-3 col-xs-12">Image Category (Optional)</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select name="category" class="form-control">
-                            <option value="" Selected>Please Select Category</option>
-                            <option value="1" >School</option>
-                            <option value="2">University</option>
-                             <option value="3">Class Room</option>
-                              <option value="4">College</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="about" class="control-label col-md-3 col-sm-3 col-xs-12">Image Type<span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select name="img_type" class="form-control" required>
-                            <option value="1" selected>Gallery</option>
-                            <option value="3">Popup</option>
-                          </select>
                         </div>
                       </div>
 

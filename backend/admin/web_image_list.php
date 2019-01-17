@@ -16,14 +16,19 @@ function showMessage($msg){
   }
 
 function getvideo($connection){
-  $sql = "SELECT * FROM `gallery` WHERE `type`='1' ORDER BY `id` DESC";
+  $sql = "SELECT * FROM `gallery` WHERE `type`='1' OR `type`='3' ORDER BY `id` DESC";
   if ($res = $connection->query($sql)) {
     $sl_count = 1;
     while($image = $res->fetch_assoc()){
       print '<tr>
                 <td>'.$sl_count.'</td>
-                <td><img src="../uploads/gallery_image/'.$image['source'].'" height="100"></td>
-                <td>'.$image['date_added'].'</td>
+                <td><img src="../uploads/gallery_image/'.$image['source'].'" height="100"></td>';
+      if ($image['type'] == '1') {
+        print '<td><button class="alert alert-success">Gallery</button></td>';
+      }else{
+        print '<td> <button class="alert alert-info">Popup</button></td>';
+      }
+                print'<td>'.$image['date_added'].'</td>
                 <td>
                     <a href="php/web_image_video/delete_image.php?i_id='.$image['id'].'&img='.$image['source'].'" class="btn btn-danger">Delete</a>
                 </td>
@@ -55,7 +60,8 @@ function getvideo($connection){
                       <thead>
                         <tr>
                           <th>Sl</th>
-                          <th>Video</th>
+                          <th>Image</th>
+                          <th>Image Type</th>
                           <th>Date added</th>
                           <th>Actions</th>
                         </tr>

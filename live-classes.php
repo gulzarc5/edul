@@ -210,10 +210,12 @@ function getBatch($connection,$state = null,$city = null){
   
 }
 ?>
-
-<div class="container-fluid bg-no-overlay">
+<style type="text/css">
+    
+</style>
+<div class="container tophead">
     <div class="row text-center">
-    <h1 style="margin-top: 90px;">Live Classes</h1>
+    <h1 style="">Live Classes</h1>
     <p><span><a href="index.php">Home <i class='fa fa-angle-right'></i></a></span> 
     <span>Live Classes</span></p>
         

@@ -6,9 +6,9 @@ if(empty($_SESSION['user_id']) || empty($_SESSION['email'])) {
 include('include/header.php');
 ?>
 
-<div class="container-fluid bg-no-overlay">
+<div class="container tophead">
     <div class="row text-center">
-    <h1 style="margin-top: 90px;">Live Classes</h1>
+    <h1 style="">Live Classes</h1>
     <p><span><a href="index.php">Home <i class='fa fa-angle-right'></i></a></span> 
     <span>Live Classes</span></p>
         
@@ -77,7 +77,7 @@ include('include/header.php');
                     </tr>
                     
                       <?php
-                        $sql = "SELECT `batch`.`name` as batch_name, `batch`.`start_date` as batch_start_date, `batch`.`end_date` as batch_end_date, `batch`.`start_time` as batch_start_time, `batch`.`end_time` as batch_end_time, `batch`.`fees` AS batch_fees, `student_batch_registration`.`reg_date` as reg_date, `course`.`name` as course_name, `center`.`address` as center_address, `state`.`name` as center_state, `city`.`name` as center_city, `center`.`pin` as center_pin, `center`.`email` as center_email, `center`.`phone_no` as center_phone, `center`.`name` as center_name FROM `student_batch_registration` INNER JOIN `batch` on `batch`.`id` = `student_batch_registration`.`batch_id` INNER JOIN `course` ON  `course`.`id`=`student_batch_registration`.`course_id` INNER JOIN `center` ON `center`.`id`=`student_batch_registration`.`center_id` INNER JOIN `state` ON `state`.`id`=`center`.`state_id` INNER JOIN `city` ON `city`.`city_id` =`center`.`city_id` WHERE  `student_id`='$_SESSION[user_id]'";
+                        $sql = "SELECT `batch`.`name` as batch_name, `batch`.`start_date` as batch_start_date, `batch`.`end_date` as batch_end_date, `batch`.`start_time` as batch_start_time, `batch`.`end_time` as batch_end_time, `batch`.`fees` AS batch_fees, `student_batch_registration`.`reg_date` as reg_date, `course`.`name` as course_name, `center`.`address` as center_address, `state`.`name` as center_state, `city`.`name` as center_city, `center`.`pin` as center_pin, `center`.`email` as center_email, `center`.`phone_no` as center_phone, `center`.`name` as center_name FROM `student_batch_registration` INNER JOIN `batch` on `batch`.`id` = `student_batch_registration`.`batch_id` INNER JOIN `course` ON  `course`.`id`=`student_batch_registration`.`course_id` INNER JOIN `center` ON `center`.`id`=`student_batch_registration`.`center_id` INNER JOIN `state` ON `state`.`id`=`center`.`state_id` INNER JOIN `city` ON `city`.`city_id` =`center`.`city_id` where `student_batch_registration`.`student_id` = '$_SESSION[user_id]'";
                         if ($res = $connection->query($sql)) {
                           $count = 1;
                           while($row_batch = $res->fetch_assoc()){

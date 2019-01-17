@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>Edulounge | </title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,23 +39,24 @@
                 <input name="password" type="password" class="form-control" placeholder="Password" required />
               </div>
               <div>
-                <input type="submit" value="Log In" class="btn btn-default submit">
-                <a class="reset_pass" href="#">Lost your password?</a>
+                <input type="submit" value="Log In" class="btn btn-default submit" style="margin-left: 146px;">
+               <!--  <a class="reset_pass" href="#">Lost your password?</a> -->
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">New to site?
+                <!-- <p class="change_link">New to site?
                   <a href="#signup" class="to_register"> Create Account </a>
-                </p>
+                </p> -->
 
                 <div class="clearfix"></div>
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                 <img src="../uploads/logo.png" height="40">
+                    <!-- <i class="fa fa-paw"></i> Edulounge!</h1> -->
+                  <p>©2018 All Rights Reserved. Edulounge!</p>
                 </div>
               </div>
             </form>

@@ -1,10 +1,17 @@
 <?php
 include('include/header.php');
+
+function mysql_entities_fix_string($string){return htmlentities(mysql_fix_string($string));}
+function mysql_fix_string($string){
+    if (get_magic_quotes_gpc()) 
+        $string = stripslashes($string);
+    return $string;
+}
 ?>
 
-<div class="container-fluid bg-no-overlay">
+<div class="container tophead">
     <div class="row text-center">
-    <h1 style="margin-top: 90px;">Photos</h1>
+    <h1 style="">Photos</h1>
     <p><span><a href="index.php">Home <i class='fa fa-angle-right'></i></a></span> 
     <span>Photos</span></p>
         
@@ -12,9 +19,35 @@ include('include/header.php');
 </div>
 
 <section>
-  <div class="container gal-container" style="padding-top: 70px;">
+
+  <div class="container gal-container" style="padding-top: 30px;">
+    <div align="center">
+            <a href="photos1.php?id=5">
+              <button class="btn btn-default filter-button" data-filter="all">All</button>
+            </a>
+            <a href="photos1.php?id=1">
+              <button class="btn btn-default filter-button" data-filter="hdpe">School</button>
+            </a>
+            <a href="photos1.php?id=2">
+              <button class="btn btn-default filter-button" data-filter="sprinkle">University</button>
+            </a>
+            <a href="photos1.php?id=3">
+              <button class="btn btn-default filter-button" data-filter="spray">Class Room</button>
+            </a>
+            <a href="photos1.php?id=4">
+              <button class="btn btn-default filter-button" data-filter="irrigation">College</button>
+            </a>
+        </div>
     <?php
-      $sql = "SELECT * FROM `gallery` WHERE `type`='1' ORDER BY `id` DESC";
+      $sql = "SELECT * FROM `gallery` WHERE `type`='1'";
+      if (isset($_GET['id'])) {
+          $category_image = $connection->real_escape_string(mysql_entities_fix_string($_GET['id']));
+          if ($category_image != 5) {
+            $sql = $sql." AND `category` = '$category_image'";
+
+          }
+      }
+      $sql = $sql." ORDER BY `id` DESC ";
       if ($res = $connection->query($sql)){
         $count = 1;
          while($image = $res->fetch_assoc()){

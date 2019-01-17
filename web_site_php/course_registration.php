@@ -10,7 +10,8 @@ if ($_POST['batch_id_reg']) {
 	$pin = $connection->real_escape_string(mysql_entities_fix_string($_POST['pin']));
 	$terms = $connection->real_escape_string(mysql_entities_fix_string($_POST['terms']));
 	$email = $connection->real_escape_string(mysql_entities_fix_string($_POST['email']));
-	$icai_no = $connection->real_escape_string(mysql_entities_fix_string($_POST['icai_no']));
+	$registration_type = $connection->real_escape_string(mysql_entities_fix_string($_POST['registration_type']));
+	$registration_no = $connection->real_escape_string(mysql_entities_fix_string($_POST['registration_no']));
 	$address2 = $connection->real_escape_string(mysql_entities_fix_string($_POST['address2']));
 	$city = $connection->real_escape_string(mysql_entities_fix_string($_POST['city']));
 	$batch_id = $connection->real_escape_string(mysql_entities_fix_string($_POST['batch_id_reg']));
@@ -37,7 +38,7 @@ if ($_POST['batch_id_reg']) {
 			if ($res_fetch_batch = $connection->query($fetch_batch_sql)) {
 				$row_batch = $res_fetch_batch->fetch_assoc();
 
-				$sql_batch_reg = "INSERT INTO `student_batch_registration`(`id`, `student_id`, `course_id`, `batch_id`, `center_id`, `amount`, `is_paid`, `reg_date`) VALUES (null,'$user_id','$row_batch[course_id]','$batch_id','$row_batch[center_id]','$row_batch[fees]','0',date('now'))";
+				$sql_batch_reg = "INSERT INTO `student_batch_registration`(`id`, `student_id`, `course_id`, `batch_id`, `center_id`, `amount`, `is_paid`,`comments`, `registration_type`, `registration_no`, `reg_date`) VALUES (null,'$user_id','$row_batch[course_id]','$batch_id','$row_batch[center_id]','$row_batch[fees]','0',null,'$registration_type','$registration_no',date('now'))";
 				if ($res_batch_reg = $connection->query($sql_batch_reg)) {
 					header("location:../receipt.php?msg=1&batch=".$batch_id."");
 				}else{
@@ -55,8 +56,11 @@ if ($_POST['batch_id_reg']) {
 		if ($res_fetch_batch = $connection->query($fetch_batch_sql)) {
 				$row_batch = $res_fetch_batch->fetch_assoc();
 
-				$sql_batch_reg = "INSERT INTO `student_batch_registration`(`id`, `student_id`, `course_id`, `batch_id`, `center_id`, `amount`, `is_paid`, `reg_date`) VALUES (null,'$_SESSION[user_id]','$row_batch[course_id]','$batch_id','$row_batch[center_id]','$row_batch[fees]','0',date('now'))";
+				$sql_batch_reg = "INSERT INTO `student_batch_registration`(`id`, `student_id`, `course_id`, `batch_id`, `center_id`, `amount`, `is_paid`,`comments`, `registration_type`, `registration_no`, `reg_date`) VALUES (null,'$_SESSION[user_id]','$row_batch[course_id]','$batch_id','$row_batch[center_id]','$row_batch[fees]','0',null,'$registration_type','$registration_no',date('now'))";
 				if ($res_batch_reg = $connection->query($sql_batch_reg)) {
+
+					$sql_update_user_info = "";
+
 					header("location:../receipt.php?msg=1&batch=".$batch_id."");
 				}else{
 					header("location:../live-classes-register.php?msg=2");
@@ -82,3 +86,5 @@ if ($_POST['batch_id_reg']) {
 	    return $string;
 	}
 ?>
+
+

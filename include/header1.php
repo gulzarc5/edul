@@ -49,31 +49,56 @@ include_once "backend/database_connection/connection.php";
                 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 		<!-- Indicators -->
 				      <ol class="carousel-indicators">
-				        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				      	<?php
+				      	$sql_popup = "SELECT * FROM `gallery` WHERE `type`='3'";
+				      	if ($res_popup = $connection->query($sql_popup)) {
+				      		$count = 0;
+				      		while($row_popup = $res_popup->fetch_assoc()){
+				      			if ($count == 0) {
+				      				print '<li data-target="#carousel-example-generic" data-slide-to="'.$count.'" class="active"></li>';
+				      			}else{
+				      				print '<li data-target="#carousel-example-generic" data-slide-to="'.$count.'" ></li>';
+				      			}
+				      			
+				      			$count++;
+				      		}
+				      		
+				      	}
+				      	?>
+				        <!-- <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 				        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				        <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
 				      </ol>
 
 				      <!-- Wrapper for slides -->
-				      <div class="carousel-inner">
-				        <div class="item active">
-				          <img class="img-responsive" src="images/photo/p1.png" alt="...">
-				          <div class="carousel-caption">
-				           <!--  <h2>Heading</h2> -->
-				          </div>
-				        </div>
-				        <div class="item">
-				          <img class="img-responsive" src="images/photo/p2.png" alt="...">
-				          <div class="carousel-caption">
-				            <!-- <h2>Heading</h2> -->
-				          </div>
-				        </div>
-				        <div class="item">
-				          <img class="img-responsive" src="images/photo/p3.png" alt="...">
-				          <div class="carousel-caption">
-				            <!-- <h2>Heading</h2> -->
-				          </div>
-				        </div>
+				      <div class="carousel-inner">   
+				       
+				        
+				      	<?php
+				      	$sql_popup = "SELECT * FROM `gallery` WHERE `type`='3'";
+				      	if ($res_popup = $connection->query($sql_popup)) {
+				      		$count = 0;
+				      		while($row_popup = $res_popup->fetch_assoc()){
+				      			if ($count == 0) {
+				      				print ' <div class="item active">
+							          <img src="backend/uploads/gallery_image/'.$row_popup['source'].'" alt="...">
+							          <div class="carousel-caption">
+							          
+							          </div>
+							        </div>';
+				      			}else{
+				      				print ' <div class="item">
+							           <img src="backend/uploads/gallery_image/'.$row_popup['source'].'" alt="...">
+							          <div class="carousel-caption">
+							          
+							          </div>
+							        </div>';
+				      			}
+				      			$count++;
+				      		}
+				      		
+				      	}
+				      	?>
 				      </div>
 
 				      <!-- Controls -->
@@ -175,7 +200,7 @@ include_once "backend/database_connection/connection.php";
 			             GALLERY
 			            </a>
 			            <ul class="dropdown-menu" role="menu">
-                                <li><a href="photos.php">PHOTOS</a></li>
+                                <li><a href="photos1.php">PHOTOS</a></li>
                                 <li><a href="videos.php">VIDEOS</a></li>
 			            </ul>
 			          </li>
@@ -216,7 +241,7 @@ include_once "backend/database_connection/connection.php";
 	
 	<div class="container-fluid">
 	<div class="row">
-		<iframe src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"  width="100%" height="315"  frameborder="0" allowfullscreen></iframe>
+		<iframe src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"  width="100%" height="400"  frameborder="0" allowfullscreen></iframe>
 	</div>
 	</div>
 

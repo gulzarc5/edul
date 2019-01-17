@@ -125,9 +125,9 @@ include('include/header.php');
  
 
 
-<div class="container-fluid bg-no-overlay">
+<div class="container tophead">
     <div class="row text-center">
-		<h1 style="margin-top: 90px;">About Us</h1>
+		<h1 style="">About Us</h1>
 		<p><span><a href="index.php">Home <i class='fa fa-angle-right'></i></a></span> 
 		<span>About Us</span></p>
         

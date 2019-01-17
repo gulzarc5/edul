@@ -37,6 +37,7 @@
 	    overflow-x: hidden;
 	   
 	}
+
 	p {
 	    font-family: "Open Sans", sans-serif;
 	    font-size: 15px;
@@ -9395,5 +9396,9 @@ i.red{
 	height: 184px;
     width: 175px;
 }
-
+.tophead {
+    background-color: #09caca;
+    border-radius: 10px; 
+    color: white;
+  }
 
