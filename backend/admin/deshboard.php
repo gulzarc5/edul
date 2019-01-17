@@ -24,7 +24,6 @@ function getCentersDeshboard($connection){
   }
 }
 ?>
-?>
 
 
   <!-- page content -->
@@ -113,7 +112,6 @@ function getCentersDeshboard($connection){
               <div class="row">
                 <div class="col-md-4">
                 </div>
-                <div class="col-md-12" id="print_div">
                     <div class="">
                       <div class="row">
                       </div>
@@ -189,7 +187,6 @@ function getCentersDeshboard($connection){
               </div>
             </div>
             <div class="row text-center">  </div>
-            <div class="row tblscroll">
                             <div class="table-responsive tblpd"> 
                               <table class="table table-striped table-bordered table-hover" id="tblcenterlist" style="color:#333333;font-size:11px;" cellspacing="0" cellpadding="3">
                                 <tbody>
@@ -215,7 +212,7 @@ function getCentersDeshboard($connection){
                               </tbody>
                             </table>
                           </div>    
-                        </div>
+                      
 
 
 
@@ -230,7 +227,6 @@ function getCentersDeshboard($connection){
 
 
       </div>
-    </div> 
   </div>
 </div>
             </div>

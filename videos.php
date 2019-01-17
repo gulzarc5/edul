@@ -2,9 +2,9 @@
 include('include/header.php');
 ?>
 
-<div class="container-fluid bg-no-overlay">
+<div class="container tophead">
     <div class="row text-center">
-    <h1 style="margin-top: 90px;">Videos</h1>
+    <h1 style="">Videos</h1>
     <p><span><a href="index.php">Home <i class='fa fa-angle-right'></i></a></span> 
     <span>Videos</span></p>
         

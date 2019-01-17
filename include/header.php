@@ -115,7 +115,7 @@ include_once "backend/database_connection/connection.php";
 			             GALLERY
 			            </a>
 			            <ul class="dropdown-menu" role="menu">
-                                <li><a href="photos.php">PHOTOS</a></li>
+                                <li><a href="photos1.php">PHOTOS</a></li>
                                 <li><a href="videos.php">VIDEOS</a></li>
 			            </ul>
 			          </li>

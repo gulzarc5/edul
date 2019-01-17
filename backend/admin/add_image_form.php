@@ -8,6 +8,8 @@ function showMessage($msg){
       print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
     }
   }
+
+
 ?>
 <div class="clearfix"></div>
 <div class="right_col" role="main">
@@ -35,11 +37,22 @@ function showMessage($msg){
                           <input type="file"  required="required" class="form-control" name="image" onchange="readURL(this);">
                         </div>
                       </div>
-
+                      <div class="form-group">
+                        <label for="about" class="control-label col-md-3 col-sm-3 col-xs-12">Image Category (Optional)</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select name="category" class="form-control">
+                            <option value="" Selected>Please Select Category</option>
+                            <option value="1" >School</option>
+                            <option value="2">University</option>
+                             <option value="3">Class Room</option>
+                              <option value="4">College</option>
+                          </select>
+                        </div>
+                      </div>
                       <div class="form-group">
                         <label for="about" class="control-label col-md-3 col-sm-3 col-xs-12">Image Type<span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select name="img_type" class="form-control">
+                          <select name="img_type" class="form-control" required>
                             <option value="1" selected>Gallery</option>
                             <option value="3">Popup</option>
                           </select>

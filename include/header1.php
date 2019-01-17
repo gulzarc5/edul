@@ -71,27 +71,9 @@ include_once "backend/database_connection/connection.php";
 				      </ol>
 
 				      <!-- Wrapper for slides -->
-				      <div class="carousel-inner">
-<<<<<<< HEAD
-				        <div class="item active">
-				          <img class="img-responsive" src="images/photo/p1.png" alt="...">
-				          <div class="carousel-caption">
-				           <!--  <h2>Heading</h2> -->
-				          </div>
-				        </div>
-				        <div class="item">
-				          <img class="img-responsive" src="images/photo/p2.png" alt="...">
-				          <div class="carousel-caption">
-				            <!-- <h2>Heading</h2> -->
-				          </div>
-				        </div>
-				        <div class="item">
-				          <img class="img-responsive" src="images/photo/p3.png" alt="...">
-				          <div class="carousel-caption">
-				            <!-- <h2>Heading</h2> -->
-				          </div>
-				        </div>
-=======
+				      <div class="carousel-inner">   
+				       
+				        
 				      	<?php
 				      	$sql_popup = "SELECT * FROM `gallery` WHERE `type`='3'";
 				      	if ($res_popup = $connection->query($sql_popup)) {
@@ -117,8 +99,6 @@ include_once "backend/database_connection/connection.php";
 				      		
 				      	}
 				      	?>
-				      
->>>>>>> chk
 				      </div>
 
 				      <!-- Controls -->
@@ -220,7 +200,7 @@ include_once "backend/database_connection/connection.php";
 			             GALLERY
 			            </a>
 			            <ul class="dropdown-menu" role="menu">
-                                <li><a href="photos.php">PHOTOS</a></li>
+                                <li><a href="photos1.php">PHOTOS</a></li>
                                 <li><a href="videos.php">VIDEOS</a></li>
 			            </ul>
 			          </li>
@@ -261,7 +241,7 @@ include_once "backend/database_connection/connection.php";
 	
 	<div class="container-fluid">
 	<div class="row">
-		<iframe src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"  width="100%" height="315"  frameborder="0" allowfullscreen></iframe>
+		<iframe src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"  width="100%" height="400"  frameborder="0" allowfullscreen></iframe>
 	</div>
 	</div>
 

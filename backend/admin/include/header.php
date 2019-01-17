@@ -44,7 +44,7 @@ include_once "../database_connection/connection.php";
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="deshboard.php" class="site_title"><i class="fa fa-paw"></i> <span>Edu Lounge</span></a>
+              <a href="deshboard.php" class="site_title"><img src="../uploads/logo.png" height="40"></a>
             </div>
 
             <div class="clearfix"></div>
@@ -110,6 +110,8 @@ include_once "../database_connection/connection.php";
                       <li><a href="web_video_list.php">Videos</a></li>
                       <li><a href="add_videos_form.php">Upload Video</a></li>
                     </ul>
+                  </li>
+                  <li><a href="change_pass.php"><i class="fa fa-lock"></i> Change Password</span></a>
                   </li>
               
                  

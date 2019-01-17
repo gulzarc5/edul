@@ -10,11 +10,14 @@
 		if ($msg == 2) {
 			print "<p class='alert alert-danger'>Something Wrong Please Try Again</p>";
 		}
+		if ($msg == 3) {
+			print "<p class='alert alert-danger'>Email Id Already Exist</p>";
+		}
 	}
 ?>
-<div class="container-fluid bg-no-overlay">
+<div class="container tophead">
     <div class="row text-center">
-    <h1 style="margin-top: 90px;">Registration</h1>
+    <h1 style="">Registration</h1>
     <p><span><a href="index.php">Home <i class='fa fa-angle-right'></i></a></span> 
     <span>Registration</span></p>
         

@@ -2,9 +2,9 @@
 include('include/header.php');
 ?>
 
-<div class="container-fluid bg-no-overlay">
+<div class="container tophead">
     <div class="row text-center">
-    <h1 style="margin-top: 90px;">Photos</h1>
+    <h1 style="">Photos</h1>
     <p><span><a href="index.php">Home <i class='fa fa-angle-right'></i></a></span> 
     <span>Photos</span></p>
         
@@ -27,13 +27,20 @@ include('include/header.php');
         </div>
         <br/>
 
+        <?php
+      $sql = "SELECT * FROM `gallery` WHERE `type`='1' ORDER BY `id` DESC";
+      if ($res = $connection->query($sql)){
+        $count = 1;
+         while($image = $res->fetch_assoc()){
+            print '<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="backend/uploads/gallery_image/'.$image['source'].'" class="img-responsive" style="height:200px;">
+            </div>';
+         }
+     }
+?>
+            
 
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+            <!-- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
                 <img src="http://fakeimg.pl/365x365/" class="img-responsive">
             </div>
 
@@ -75,7 +82,7 @@ include('include/header.php');
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
                 <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
+            </div> -->
         </div>
     </div>
 
